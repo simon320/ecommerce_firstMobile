@@ -16,6 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/*-----------MIXIN---------*/
 /*-----------HEADER---------*/
 header {
   background: #1e4b45;
@@ -38,9 +39,10 @@ header nav {
 }
 
 header nav .logo {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
+  display: none;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
 }
 
 header nav .logo img {
@@ -50,11 +52,11 @@ header nav .logo img {
 header nav .list-container ul {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   height: 300px;
   width: 100%;
   padding-top: 80px;
-  text-align: right;
+  text-align: left;
   overflow: hidden;
   background: #333;
   -webkit-transition: max-width .5s;
@@ -71,15 +73,74 @@ header nav .list-container ul li a {
 }
 
 header nav .buy-container {
-  display: none;
-}
-
-header nav .menu-icon {
+  -ms-grid-row: 1;
+  grid-row: 1;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
+}
+
+header nav .buy-container img {
+  width: 62px;
+}
+
+header nav .menu-icon {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   position: relative;
   z-index: 10;
   width: 30px;
+}
+
+header .grid-container-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(280px, 540px);
+      grid-template-columns: minmax(280px, 540px);
+  -ms-grid-rows: 2fr;
+      grid-template-rows: 2fr;
+}
+
+header .grid-container-header .content-header-a {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+header .grid-container-header .content-header-a h1 {
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+}
+
+header .grid-container-header .content-header-a p {
+  color: #fff;
+}
+
+header .grid-container-header .content-header-a .btn {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border: 2.5px solid #e7ba52;
+  border-radius: 25px;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+header .grid-container-header .content-header-a .btn:hover {
+  background: #e7ba52;
+}
+
+header .grid-container-header .content-header-b {
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+header .grid-container-header .content-header-b img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

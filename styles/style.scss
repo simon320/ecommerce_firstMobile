@@ -18,6 +18,21 @@ body {
 }
 
 
+/*-----------MIXIN---------*/
+@mixin btn {
+    display: inline-block;
+    background: none;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border: 2.5px solid #e7ba52;
+    border-radius: 25px;
+    transition: background .5s;
+    &:hover{
+        background: #e7ba52;
+    } 
+}
+
 
 /*-----------HEADER---------*/
 header {
@@ -34,7 +49,9 @@ header {
         width: 100%;
 
         .logo {
-            grid-column: 1 / 2;
+            display: none;
+
+            grid-column: 2 / 4;
 
             img {
                 width: 62px;
@@ -46,11 +63,11 @@ header {
             ul {
                 position: absolute;
                 top: 0;
-                right: 0;
+                left: 0;
                 height: 300px;
                 width: 100%;
                 padding-top: 80px;
-                text-align: right;
+                text-align: left;
                 overflow: hidden;
                 background: #333;
                 transition: max-width .5s;
@@ -67,14 +84,52 @@ header {
         }
 
         .buy-container {
-            display: none;
+            grid-row: 1;
+            grid-column: 4 / 5;
+
+            img {
+                width: 62px;
+            }
         }
 
         .menu-icon {
-            grid-column: 4 / 5;
+            grid-row: 1;
+            grid-column: 1 / 2;
             position: relative;
             z-index: 10;
             width: 30px;
         }
     }
-}
+
+    .grid-container-header {
+        display: grid;
+        grid-template-columns: minmax(280px, 540px);
+        grid-template-rows: 2fr;
+
+        .content-header-a {
+            grid-row: 2;
+
+            h1 {
+                font-size: 50px;
+                line-height: 60px;
+                // margin-bottom: 25px;
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
+            .btn {
+                @include btn;
+            }
+        }
+        .content-header-b {
+            grid-row: 1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+} // Header
