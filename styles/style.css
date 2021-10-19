@@ -110,12 +110,14 @@ header .grid-container-header .content-header-a {
 }
 
 header .grid-container-header .content-header-a h1 {
-  font-size: 50px;
+  font-size: 46px;
   line-height: 60px;
+  margin: 28px;
   color: #fff;
 }
 
 header .grid-container-header .content-header-a p {
+  margin: 20px 35px 0;
   color: #fff;
 }
 
@@ -124,11 +126,11 @@ header .grid-container-header .content-header-a .btn {
   background: none;
   color: #fff;
   padding: 8px 30px;
-  margin: 30px 0;
   border: 2.5px solid #e7ba52;
   border-radius: 25px;
   -webkit-transition: background .5s;
   transition: background .5s;
+  margin: 20px;
 }
 
 header .grid-container-header .content-header-a .btn:hover {
