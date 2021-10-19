@@ -1,0 +1,80 @@
+/*-----------FONTs---------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/*-----------RESETs---------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*-----------HEADER---------*/
+header {
+    background: rgb(30,75,69);
+    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(115,155,112,1) 59%, rgba(150,188,129,1) 79%);
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80px;
+        justify-items: center;
+        align-items: center;
+        
+        width: 100%;
+
+        .logo {
+            grid-column: 1 / 2;
+
+            img {
+                width: 62px;
+            }
+        }
+
+        .list-container {
+
+            ul {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 300px;
+                width: 100%;
+                padding-top: 80px;
+                text-align: right;
+                overflow: hidden;
+                background: #333;
+                transition: max-width .5s;
+
+                li {
+                    margin: 10px 10px;
+                    list-style-type: none;
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .buy-container {
+            display: none;
+        }
+
+        .menu-icon {
+            grid-column: 4 / 5;
+            position: relative;
+            z-index: 10;
+            width: 30px;
+        }
+    }
+}

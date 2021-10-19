@@ -1,0 +1,85 @@
+/*-----------FONTs---------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/*-----------RESETs---------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*-----------HEADER---------*/
+header {
+  background: #1e4b45;
+  background: -webkit-gradient(linear, left top, right top, from(#1e4b45), color-stop(59%, #739b70), color-stop(79%, #96bc81));
+  background: linear-gradient(90deg, #1e4b45 0%, #739b70 59%, #96bc81 79%);
+}
+
+header nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 80px;
+      grid-template-rows: 80px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header nav .logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+header nav .logo img {
+  width: 62px;
+}
+
+header nav .list-container ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 300px;
+  width: 100%;
+  padding-top: 80px;
+  text-align: right;
+  overflow: hidden;
+  background: #333;
+  -webkit-transition: max-width .5s;
+  transition: max-width .5s;
+}
+
+header nav .list-container ul li {
+  margin: 10px 10px;
+  list-style-type: none;
+}
+
+header nav .list-container ul li a {
+  color: #fff;
+}
+
+header nav .buy-container {
+  display: none;
+}
+
+header nav .menu-icon {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  position: relative;
+  z-index: 10;
+  width: 30px;
+}
+/*# sourceMappingURL=style.css.map */
