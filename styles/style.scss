@@ -107,15 +107,20 @@ header {
 
         .content-header-a {
             grid-row: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
 
             h1 {
+                text-align: end;
+                margin: 28px 28px 0;
                 font-size: 46px;
                 line-height: 60px;
-                margin: 28px;
                 color: #fff;
             }
             p {
-                margin: 20px 35px 0;
+                text-align: end;
+                margin: 0 35px 28px;
                 color: #fff;
             }
             .btn {
@@ -131,6 +136,21 @@ header {
             }
         }
     }
-
-
 } // Header
+
+
+/*-----------GALLERY---------*/
+.grid-container-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img-gallery {
+        width: 80%;
+        margin: 20px 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
