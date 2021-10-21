@@ -162,6 +162,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 10px;
+    padding: 10px;
 
 
     .item-product {
@@ -171,7 +172,7 @@ header {
         justify-content: flex-end;
         padding: 10px;
 
-        border-radius: 10px;
+        border-radius: 18px;
         background: rgb(240, 240, 240);
         box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
         transition: .5s;
@@ -185,22 +186,22 @@ header {
                     align-self: center;
                     width: 85%;
                 }
+                h4 {
+                    color: #555;
+                    font-weight: normal;
+                }
+                p {
+                    color: #c91700;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
                 .description-container {
                     width: 100%;
 
                     // background-color: rgb(30,75,69);
                     // border-radius: 15px 0 0 0;
-
-                        h4 {
-                            color: #555;
-                            font-weight: normal;
-                        }
-                        p {
-                            color: #c91700;
-                            font-size: 14px;
-                            font-weight: 400;
-                        }
                 }
+
 
                 .like {
                     position: absolute;

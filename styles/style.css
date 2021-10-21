@@ -190,6 +190,7 @@ header .grid-container-header .content-header-b img {
   -ms-grid-rows: (1fr)[12];
       grid-template-rows: repeat(12, 1fr);
   gap: 10px;
+  padding: 10px;
 }
 
 .grid-container-product .item-product {
@@ -205,7 +206,7 @@ header .grid-container-header .content-header-b img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 18px;
   background: #f0f0f0;
   -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
           box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
@@ -228,19 +229,19 @@ header .grid-container-header .content-header-b img {
   width: 85%;
 }
 
-.grid-container-product .item-product .description-container {
-  width: 100%;
-}
-
-.grid-container-product .item-product .description-container h4 {
+.grid-container-product .item-product h4 {
   color: #555;
   font-weight: normal;
 }
 
-.grid-container-product .item-product .description-container p {
+.grid-container-product .item-product p {
   color: #c91700;
   font-size: 14px;
   font-weight: 400;
+}
+
+.grid-container-product .item-product .description-container {
+  width: 100%;
 }
 
 .grid-container-product .item-product .like {
