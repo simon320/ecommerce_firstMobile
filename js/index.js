@@ -14,3 +14,20 @@ menuIcon.onclick = function menuToggle() {
         menuList.style.maxWidth = "0px";
     }
 };
+
+//Icon like
+const heart = document.getElementById("heart");
+const heartFill = document.getElementById("heartFill");
+const divLike = document.getElementsByClassName("like");
+
+heart.style.display = "block";
+heartFill.style.display = "none";
+
+divLike.onclick = function liked() {
+    if (heart.style.display == "block")
+    {
+        heart.style.display == "none";
+        heartFill.style.display == "block";
+    }
+}
+
