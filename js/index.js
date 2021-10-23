@@ -16,18 +16,24 @@ menuIcon.onclick = function menuToggle() {
 };
 
 //Icon like
-const heart = document.getElementById("heart");
-const heartFill = document.getElementById("heartFill");
-const divLike = document.getElementsByClassName("like");
+let heart = document.getElementsByClassName("bi-heart");
+let heartFill = document.getElementsByClassName("bi-heart-fill");
+let divLike = document.getElementsByClassName("like");
 
-heart.style.display = "block";
-heartFill.style.display = "none";
 
-divLike.onclick = function liked() {
-    if (heart.style.display == "block")
-    {
-        heart.style.display == "none";
-        heartFill.style.display == "block";
+for (let i=0; i<8; i++) {
+    heart[i].style.display = "block";
+    heartFill[i].style.display = "none";
+    divLike[i].onclick = function () {
+        if (heart[i].style.display == "block") 
+        {
+            heart[i].style.display = "none";
+            heartFill[i].style.display = "block";
+        }
+        else 
+        {
+            heart[i].style.display = "block";
+            heartFill[i].style.display = "none";
+        }
     }
 }
-

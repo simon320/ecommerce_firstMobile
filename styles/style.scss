@@ -161,7 +161,7 @@ header {
 
     h2  {
         margin: 80px 10px 20px;
-        border-bottom: 1px solid #26e341;
+        border-bottom: 1px solid #f75e05;
     }
     
     .grid-container-product {
@@ -182,7 +182,7 @@ header {
             border-radius: 18px;
             background: rgb(240, 240, 240);
             box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
-            transition: .5s;
+            transition: .2s;
 
                 &:hover {
                     transform: translateY(-5px);
@@ -206,11 +206,11 @@ header {
                         position: relative;
                         z-index: 10;
                         margin: 0 10px 10px;
-                        color: #c91700;
+                        color: #f75e05;
                         font-size: 14px;
                         font-weight: 400;
                     }
-                    .description-container {
+                    .base-container {
                         position: absolute;
                         z-index: 0;
                         bottom: -40px;
@@ -227,6 +227,7 @@ header {
 
                     .like {
                         position: absolute;
+                        z-index: 10;
                         top: 10px;
                         right: 10px;
                         justify-items: flex-start;
@@ -239,33 +240,22 @@ header {
                         justify-content: center;
                         align-items: center;
 
-                        // margin-bottom: 5px;
                         border-radius: 15px;
                         box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
-                        transition: .5s;
-                        
+                            &:hover {
+                                cursor: pointer;
+                            }
                             i {
                                 position: absolute;
                                 top: 4px;
                                 transform: scale(.8);
                                 opacity: .3;
-                                // color: #517ba2;
                             }
                             
                             .bi-heart-fill {
-                                color: rgb(169, 153, 153);
-                                opacity: .2;
+                                color: rgb(161, 7, 7);
+                                opacity: 1;
                             }
-                            .checkbox-heart {
-                                position: relative;
-                                z-index: 100;
-                                transform: scale(2);
-                                opacity: 0;
-                                &:checked ~ .bi-heart-fill {
-                                    animation: 1s forwards alternate heartGrows;
-                                }
-                            }
-                    
                     }
         }
         .item1 {
@@ -303,4 +293,70 @@ header {
 
 
     }
-}
+} //  // END  ____  product
+
+
+/*-----------CAROUSEL---------*/
+.carousel {
+    overflow: hidden;
+
+    .flex-container-carousel {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 300vw;
+        margin-bottom: 50px;
+
+        .article-container {
+            width: 100vw;
+            
+            img {
+                width: 100vw;
+            }
+
+            .carousel-caption {
+                position: absolute;
+                z-index: 10;
+                bottom: 10px;
+                width: 100vw;
+                text-align: center;
+
+
+                h5 {
+                    font-size: 2em;
+                }
+                p {
+                    margin: auto;
+                    width: 80vw;
+                }
+            }
+        }
+        #arrows-wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            height: 100%;
+            padding: 20px;
+
+            p {
+                cursor: pointer;
+                font-size: 3em;
+            }
+            
+            #arrow-prev {
+                position: relative;
+                z-index: 1000;
+            }
+            #arrow-next {
+                position: relative;
+                justify-self: flex-end;
+                z-index: 1000;
+            }
+        
+        
+        }
+    }
+
+}//  // END  ____  carousel
