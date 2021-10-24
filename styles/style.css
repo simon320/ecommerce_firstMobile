@@ -258,7 +258,7 @@ header .grid-container-header .content-header-b img {
   z-index: 0;
   bottom: -40px;
   -webkit-transform: rotateZ(-25deg);
-  transform: rotateZ(-25deg);
+          transform: rotateZ(-25deg);
   width: 350px;
   height: 180px;
   opacity: .4;
@@ -383,47 +383,19 @@ header .grid-container-header .content-header-b img {
 
 /*-----------CAROUSEL---------*/
 .carousel {
-  overflow: hidden;
-}
-
-.carousel .flex-container-carousel {
   position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 300vw;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 
-.carousel .flex-container-carousel .article-container {
-  width: 100vw;
-}
-
-.carousel .flex-container-carousel .article-container img {
-  width: 100vw;
-}
-
-.carousel .flex-container-carousel .article-container .carousel-caption {
+.carousel #arrows-wrapper {
+  -ms-flex-item-align: center;
+      align-self: center;
   position: absolute;
-  z-index: 10;
-  bottom: 10px;
-  width: 100vw;
-  text-align: center;
-}
-
-.carousel .flex-container-carousel .article-container .carousel-caption h5 {
-  font-size: 2em;
-}
-
-.carousel .flex-container-carousel .article-container .carousel-caption p {
-  margin: auto;
-  width: 80vw;
-}
-
-.carousel .flex-container-carousel #arrows-wrapper {
-  position: absolute;
+  top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,19 +410,90 @@ header .grid-container-header .content-header-b img {
   padding: 20px;
 }
 
-.carousel .flex-container-carousel #arrows-wrapper p {
+.carousel #arrows-wrapper p {
+  -webkit-text-stroke: .7px #000;
+  color: #fff;
   cursor: pointer;
-  font-size: 3em;
+  font-size: 10vw;
 }
 
-.carousel .flex-container-carousel #arrows-wrapper #arrow-prev {
+.carousel #arrows-wrapper #arrow-prev {
   position: relative;
   z-index: 1000;
 }
 
-.carousel .flex-container-carousel #arrows-wrapper #arrow-next {
+.carousel #arrows-wrapper #arrow-next {
   position: relative;
-  justify-self: flex-end;
   z-index: 1000;
+}
+
+.carousel .flex-container-carousel {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 300vw;
+  margin-bottom: 50px;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+
+.carousel .flex-container-carousel .article-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  -webkit-box-shadow: inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75);
+}
+
+.carousel .flex-container-carousel .article-container img {
+  position: relative;
+  z-index: -1;
+  width: 100vw;
+}
+
+.carousel .flex-container-carousel .article-container .carousel-caption {
+  background: #96bc81;
+  background: radial-gradient(circle, #96bc81 3%, rgba(30, 75, 69, 0.8) 100%);
+  -webkit-box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
+          box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
+  width: 100vw;
+  height: 209px;
+  padding: 30px;
+  text-align: center;
+}
+
+.carousel .flex-container-carousel .article-container .carousel-caption h5 {
+  -webkit-text-stroke: .7px #000;
+  color: #fff;
+  font-size: 9vw;
+}
+
+.carousel .flex-container-carousel .article-container .carousel-caption p {
+  margin: auto;
+  width: 80vw;
+}
+
+.carousel .flex-container-carousel .article-container .carousel-caption .btn {
+  display: inline-block;
+  background: none;
+  color: #fff;
+  padding: 8px 30px;
+  border: 2.5px solid #e7ba52;
+  border-radius: 25px;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  margin-top: 10px;
+}
+
+.carousel .flex-container-carousel .article-container .carousel-caption .btn:hover {
+  background: #e7ba52;
 }
 /*# sourceMappingURL=style.css.map */

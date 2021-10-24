@@ -37,3 +37,39 @@ for (let i=0; i<8; i++) {
         }
     }
 }
+
+//Carousel
+let arrowPrev = document.getElementById("arrow-prev");
+let arrowNext = document.getElementById("arrow-next");
+let containerCarousel = document.getElementById("container-carousel");
+
+
+arrowNext.onclick = function() {
+    if (containerCarousel.style.left == "0%")
+    {
+        containerCarousel.style.left = "-100%"
+    }
+    else if (containerCarousel.style.left == "-100%")
+    {
+        containerCarousel.style.left = "-200%"
+    }
+    else 
+    {
+        containerCarousel.style.left = "0%"
+    }
+} 
+
+arrowPrev.onclick = function() {
+    if (containerCarousel.style.left == "0%")
+    {
+        containerCarousel.style.left = "-200%"
+    }
+    else if (containerCarousel.style.left == "-200%")
+    {
+        containerCarousel.style.left = "-100%"
+    }
+    else 
+    {
+        containerCarousel.style.left = "0%"
+    }
+} 
