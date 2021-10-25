@@ -211,12 +211,13 @@ header .grid-container-header .content-header-b img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  opacity: 0;
   border-radius: 18px;
   background: #f0f0f0;
   -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
           box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .product .grid-container-product .item-product:hover {
@@ -460,8 +461,7 @@ header .grid-container-header .content-header-b img {
 }
 
 .carousel .flex-container-carousel .article-container .carousel-caption {
-  background: #96bc81;
-  background: radial-gradient(circle, #96bc81 3%, rgba(30, 75, 69, 0.8) 100%);
+  background: #3c5c2a;
   -webkit-box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
           box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
   width: 100vw;
@@ -477,6 +477,7 @@ header .grid-container-header .content-header-b img {
 }
 
 .carousel .flex-container-carousel .article-container .carousel-caption p {
+  color: #fff;
   margin: auto;
   width: 80vw;
 }
@@ -495,5 +496,76 @@ header .grid-container-header .content-header-b img {
 
 .carousel .flex-container-carousel .article-container .carousel-caption .btn:hover {
   background: #e7ba52;
+}
+
+/*-----------HAPPY CUSTOMERS---------*/
+.customers {
+  margin: auto;
+}
+
+.customers .flex-container-customers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.customers .flex-container-customers .col-3 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 250px;
+  max-height: 400px;
+  padding: 40px 20px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #f0f0f0;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.customers .flex-container-customers .col-3:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  background: whitesmoke;
+  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff;
+          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff;
+}
+
+.customers .flex-container-customers .col-3 p {
+  font-size: 12px;
+  margin: 12px 0;
+  color: #777;
+}
+
+.customers .flex-container-customers .col-3 img {
+  width: 70px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.customers .flex-container-customers .col-3 h3 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #444;
+}
+
+.customers .flex-container-customers .col-3 div i {
+  color: #37551a;
+}
+
+.customers .flex-container-customers .ghost-effect {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 /*# sourceMappingURL=style.css.map */
