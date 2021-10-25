@@ -16,6 +16,40 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/*-----------ANIMATION---------*/
+.effect {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.animated {
+  -webkit-animation: showUp 1s;
+          animation: showUp 1s;
+}
+
 /*-----------MIXIN---------*/
 /*-----------HEADER---------*/
 header {
@@ -561,11 +595,5 @@ header .grid-container-header .content-header-b img {
 
 .customers .flex-container-customers .col-3 div i {
   color: #37551a;
-}
-
-.customers .flex-container-customers .ghost-effect {
-  opacity: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
 }
 /*# sourceMappingURL=style.css.map */

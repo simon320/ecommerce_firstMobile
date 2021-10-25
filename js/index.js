@@ -83,6 +83,7 @@ function showScroll() {
         let topAnimated = ghostEffect[i].offsetTop;
         if(topAnimated - 500 < scrollTop){
             ghostEffect[i].style.opacity = 1;
+            ghostEffect[i].classList.add("animated");
         }
     }
 }

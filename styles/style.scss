@@ -18,6 +18,20 @@ body {
 }
 
 
+/*-----------ANIMATION---------*/
+.effect {
+    opacity: 0;
+    transition: all .5s;
+}
+
+@keyframes showUp {
+    0% {transform: translateY(-50px);}
+    100% {transform: translateY(0);}
+}
+
+.animated {
+    animation: showUp 1s;
+}
 /*-----------MIXIN---------*/
 @mixin btn {
     display: inline-block;
@@ -432,11 +446,6 @@ header {
                 div i {
                     color: rgb(55, 85, 26);
                 }
-        }
-        
-        .ghost-effect {
-            opacity: 0;
-            transition: all .5s;
         }
     }
 }
