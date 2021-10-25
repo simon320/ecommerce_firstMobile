@@ -23,39 +23,66 @@ body {
   transition: all .5s;
 }
 
-@-webkit-keyframes showUp {
+@-webkit-keyframes showLeft {
   0% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes showUp {
+@keyframes showLeft {
   0% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-.animated {
-  -webkit-animation: showUp 1s;
-          animation: showUp 1s;
+@-webkit-keyframes showRight {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes showRight {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.animatedLeft {
+  -webkit-animation: showLeft 1s;
+          animation: showLeft 1s;
+}
+
+.animatedRight {
+  -webkit-animation: showRight 1s;
+          animation: showRight 1s;
 }
 
 /*-----------MIXIN---------*/
 /*-----------HEADER---------*/
 header {
   background: #1e4b45;
-  background: -webkit-gradient(linear, left top, right top, from(#1e4b45), color-stop(59%, #739b70), color-stop(79%, #96bc81));
-  background: linear-gradient(90deg, #1e4b45 0%, #739b70 59%, #96bc81 79%);
+  background: -webkit-gradient(linear, left top, right top, from(#1e4b45), color-stop(159%, #96bc81));
+  background: linear-gradient(90deg, #1e4b45 0%, #96bc81 159%);
 }
 
 header nav {
@@ -218,7 +245,7 @@ header .grid-container-header .content-header-b img {
 /*-----------PRODUCT---------*/
 .product h2 {
   margin: 80px 10px 20px;
-  border-bottom: 1px solid #f75e05;
+  border-bottom: 1px solid #96bc81;
 }
 
 .product .grid-container-product {
@@ -446,7 +473,6 @@ header .grid-container-header .content-header-b img {
 }
 
 .carousel #arrows-wrapper p {
-  -webkit-text-stroke: .7px #000;
   color: #fff;
   cursor: pointer;
   font-size: 10vw;
@@ -484,8 +510,7 @@ header .grid-container-header .content-header-b img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  -webkit-box-shadow: inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75);
-          box-shadow: inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75);
+  border-top: black 1px solid;
 }
 
 .carousel .flex-container-carousel .article-container img {
@@ -495,9 +520,10 @@ header .grid-container-header .content-header-b img {
 }
 
 .carousel .flex-container-carousel .article-container .carousel-caption {
-  background: #3c5c2a;
-  -webkit-box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
-          box-shadow: inset 0px -29px 19px -32px rgba(0, 0, 0, 0.75), inset 0px 29px 19px -32px rgba(0, 0, 0, 0.75), 0px 0px 15px 0px rgba(0, 0, 0, 0.57), 0px 1px 0px -17px rgba(0, 0, 0, 0.57);
+  background: #065a31;
+  background: linear-gradient(20deg, #1e4b45 0%, #96bc81 199%);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
   width: 100vw;
   height: 209px;
   padding: 30px;
@@ -505,7 +531,6 @@ header .grid-container-header .content-header-b img {
 }
 
 .carousel .flex-container-carousel .article-container .carousel-caption h5 {
-  -webkit-text-stroke: .7px #000;
   color: #fff;
   font-size: 9vw;
 }
@@ -594,6 +619,6 @@ header .grid-container-header .content-header-b img {
 }
 
 .customers .flex-container-customers .col-3 div i {
-  color: #37551a;
+  color: #96bc81;
 }
 /*# sourceMappingURL=style.css.map */

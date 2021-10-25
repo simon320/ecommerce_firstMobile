@@ -15,6 +15,7 @@ menuIcon.onclick = function menuToggle() {
     }
 };
 
+
 // Icon like
 let heart = document.getElementsByClassName("bi-heart");
 let heartFill = document.getElementsByClassName("bi-heart-fill");
@@ -37,6 +38,7 @@ for (let i=0; i<8; i++) {
         }
     }
 }
+
 
 // Carousel
 let arrowPrev = document.getElementById("arrow-prev");
@@ -74,8 +76,9 @@ arrowPrev.onclick = function() {
     }
 } 
 
+
 // Ghost Effect
-let ghostEffect = document.querySelectorAll(".ghost-effect");
+let ghostEffect = document.querySelectorAll(".effect");
 
 function showScroll() {
     let scrollTop = document.documentElement.scrollTop;
@@ -83,7 +86,11 @@ function showScroll() {
         let topAnimated = ghostEffect[i].offsetTop;
         if(topAnimated - 500 < scrollTop){
             ghostEffect[i].style.opacity = 1;
-            ghostEffect[i].classList.add("animated");
+            if((i % 2) == 0){
+                ghostEffect[i].classList.add("animatedLeft");
+            } else{
+                ghostEffect[i].classList.add("animatedRight");
+            }
         }
     }
 }

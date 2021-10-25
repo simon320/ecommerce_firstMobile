@@ -24,13 +24,20 @@ body {
     transition: all .5s;
 }
 
-@keyframes showUp {
-    0% {transform: translateY(-50px);}
-    100% {transform: translateY(0);}
+@keyframes showLeft {
+    0% {transform: translateX(-50px);}
+    100% {transform: translateX(0);}
+}
+@keyframes showRight {
+    0% {transform: translateX(50px);}
+    100% {transform: translateX(0);}
 }
 
-.animated {
-    animation: showUp 1s;
+.animatedLeft {
+    animation: showLeft 1s;
+}
+.animatedRight {
+    animation: showRight 1s;
 }
 /*-----------MIXIN---------*/
 @mixin btn {
@@ -50,7 +57,7 @@ body {
 /*-----------HEADER---------*/
 header {
     background: rgb(30,75,69);
-    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(115,155,112,1) 59%, rgba(150,188,129,1) 79%);
+    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 159%);
 
     nav {
         display: grid;
@@ -175,7 +182,7 @@ header {
 
     h2  {
         margin: 80px 10px 20px;
-        border-bottom: 1px solid #f75e05;
+        border-bottom: 1px solid rgb(150,188,129);
     }
     
     .grid-container-product {
@@ -331,7 +338,6 @@ header {
         padding: 20px;
 
         p {
-            -webkit-text-stroke: .7px #000;
             color: #fff;
             cursor: pointer;
             font-size: 10vw;
@@ -362,7 +368,7 @@ header {
             flex-direction: column;
             width: 100vw;
             
-            box-shadow: inset 0px 29px 19px -32px rgba(0,0,0,0.75);;
+            border-top: black 1px solid;
 
             img {
                 position: relative;
@@ -371,9 +377,9 @@ header {
             }
 
             .carousel-caption {
-                background: rgb(60, 92, 42);
-                // background: radial-gradient(circle, rgb(73, 112, 51) 3%, rgba(30,75,69,0.8) 100%);
-                box-shadow: inset 0px -29px 19px -32px rgba(0,0,0,0.75), inset 0px 29px 19px -32px rgba(0,0,0,0.75), 0px 0px 15px 0px rgba(0,0,0,0.57), 0px 1px 0px -17px rgba(0,0,0,0.57);
+                background: #065a31;
+                background: linear-gradient(20deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 199%);
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
                 width: 100vw;
                 height: 209px;
                 padding: 30px;
@@ -381,7 +387,6 @@ header {
             
 
                 h5 {
-                    -webkit-text-stroke: .7px #000;
                     color: #fff;
                     font-size: 9vw;
                 }
@@ -444,7 +449,7 @@ header {
                     color: #444;
                 }
                 div i {
-                    color: rgb(55, 85, 26);
+                    color: rgb(150,188,129);
                 }
         }
     }
