@@ -420,6 +420,20 @@ header {
 
         .title {
             align-self: center;
+
+            h3 {
+
+                span {
+                    margin: 15px;
+                }
+            }
+        }
+
+        input {
+            height: 40px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #e7ba52;
         }
 
         .container-terms {
@@ -435,6 +449,10 @@ header {
 
         .container-buttons {
             align-self: center;
+
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
 
             button {
                 @include btn;

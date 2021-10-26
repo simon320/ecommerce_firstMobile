@@ -584,6 +584,17 @@ header .grid-container-header .content-header-b img {
       align-self: center;
 }
 
+.login .flex-container-login .title h3 span {
+  margin: 15px;
+}
+
+.login .flex-container-login input {
+  height: 40px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e7ba52;
+}
+
 .login .flex-container-login .container-terms {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,8 +613,14 @@ header .grid-container-header .content-header-b img {
 
 .login .flex-container-login .container-buttons {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .login .flex-container-login .container-buttons button {
