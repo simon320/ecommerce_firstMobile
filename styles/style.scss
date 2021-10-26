@@ -405,6 +405,46 @@ header {
 }//  // END  ____  carousel
 
 
+/*-----------LOGIN---------*/
+.login {
+    background: rgba(30,75,69,1) 0%;
+    margin: 100px 0;
+    padding: 50px 5px;
+    
+    .flex-container-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 500px;
+        color: #fff;
+
+        .title {
+            align-self: center;
+        }
+
+        .container-terms {
+            display: flex;
+
+            input {
+                align-self: center;
+            }
+            p {
+                margin: 0 5px;
+            }
+        }
+
+        .container-buttons {
+            align-self: center;
+
+            button {
+                @include btn;
+            }
+        }
+    }
+}
+
+
+
 /*-----------HAPPY CUSTOMERS---------*/
 .customers {
     margin: auto;
