@@ -101,5 +101,49 @@ window.addEventListener('scroll', showScroll);
 // Login
 const signUp = document.getElementById("signUp");
 const signIn = document.getElementById("signIn");
+const nameUser = document.getElementsByClassName("name");
+const terms = document.getElementById("terms");
+const buttons = document.getElementsByClassName("buttons");
+const containerInput = document.getElementsByClassName("container-input");
+const login = document.getElementsByClassName("login");
+let signUpClick = 1;
+let signInClick = 0;
 
-signUp.style.borderBottom = "2px solid #fff";
+signUp.style.borderBottom = "2px solid #e7ba52";
+buttons[1].style.display = "none"; 
+
+signIn.onclick = function() {
+    if(signInClick == 0)
+    {
+        signIn.style.borderBottom = "2px solid #e7ba52"
+        buttons[1].style.display = "block"; 
+        containerInput[0].style.justifyContent = "flex-start";
+        login[0].style.background = "rgba(30,75,79,1)";
+        signInClick = 1;
+
+        signUp.style.borderBottom = "none";
+        nameUser[0].style.display = "none";
+        nameUser[1].style.display = "none";
+        terms.style.display = "none"
+        buttons[0].style.display = "none"; 
+        signUpClick = 0;
+    }
+}
+
+signUp.onclick = function() {
+    if(signUpClick == 0)
+    {
+        signIn.style.borderBottom = "none"
+        buttons[1].style.display = "none"; 
+        containerInput[0].style.justifyContent = "space-evenly";
+        signInClick = 0;
+        
+        signUp.style.borderBottom = "2px solid #e7ba52";
+        nameUser[0].style.display = "block";
+        nameUser[1].style.display = "block";
+        terms.style.display = "flex"
+        buttons[0].style.display = "block"; 
+        login[0].style.background = "rgba(30,75,69,1)";
+        signUpClick = 1;
+    }
+}
