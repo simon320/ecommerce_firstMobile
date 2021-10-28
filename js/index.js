@@ -7,7 +7,7 @@ menuList.style.maxWidth = "0px";
 menuIcon.onclick = function menuToggle() {
     if (menuList.style.maxWidth == "0px") 
     {
-        menuList.style.maxWidth = "180px";
+        menuList.style.maxWidth = "100%";
     } 
     else 
     {
@@ -118,7 +118,7 @@ signIn.onclick = function() {
         signIn.style.borderBottom = "2px solid #e7ba52"
         buttons[1].style.display = "block"; 
         containerInput[0].style.justifyContent = "flex-start";
-        login[0].style.background = "rgba(30,75,79,1)";
+        login[0].style.background = "linear-gradient(45deg, rgba(5,69,30,1) 0%, rgba(9,121,61,1) 53%, rgba(1,200,108,1) 100%)";
         signInClick = 1;
 
         signUp.style.borderBottom = "none";
@@ -143,7 +143,7 @@ signUp.onclick = function() {
         nameUser[1].style.display = "block";
         terms.style.display = "flex"
         buttons[0].style.display = "block"; 
-        login[0].style.background = "rgba(30,75,69,1)";
+        login[0].style.background = "linear-gradient(328deg, rgba(5,69,30,1) 0%, rgba(9,121,61,1) 53%, rgba(1,200,108,1) 100%)";
         signUpClick = 1;
     }
 }

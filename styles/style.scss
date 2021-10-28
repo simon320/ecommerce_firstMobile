@@ -84,7 +84,7 @@ header {
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 300px;
+                height: 145vw;
                 width: 100%;
                 padding-top: 80px;
                 text-align: left;
@@ -106,6 +106,9 @@ header {
         .buy-container {
             grid-row: 1;
             grid-column: 4 / 5;
+
+            position: relative;
+            z-index: 100;
 
             img {
                 width: 62px;
@@ -153,6 +156,8 @@ header {
             grid-row: 1;
 
             img {
+                position: relative;
+                z-index: 100;
                 width: 100%;
             }
         }
@@ -406,12 +411,9 @@ header {
 /*-----------LOGIN---------*/
 .login {
     background: rgb(150,188,129);
-    background: linear-gradient(90deg, rgba(150,188,129,1) 12%, rgba(119,159,113,1) 14%, rgba(118,158,112,1) 38%, rgba(97,138,102,1) 41%, rgba(52,96,64,1) 67%, rgba(45,80,64,1) 69%, rgba(38,78,69,1) 91%, rgba(36,81,82,1) 97%, rgba(32,77,96,1) 98%, rgba(30,75,69,0.8) 100%);
-    // background-image: url(../assets/img-login.jpg);
-    // background: rgba(30,75,69,1);
     margin: 100px 0;
     padding: 50px 5px;
-    transition: background 1s;
+    transition: all 2s;
     
     .flex-container-login {
         display: flex;
