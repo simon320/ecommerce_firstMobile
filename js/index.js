@@ -41,9 +41,9 @@ for (let i=0; i<8; i++) {
 
 
 // Carousel
-let arrowPrev = document.getElementById("arrow-prev");
-let arrowNext = document.getElementById("arrow-next");
-let containerCarousel = document.getElementById("container-carousel");
+const arrowPrev = document.getElementById("arrow-prev");
+const arrowNext = document.getElementById("arrow-next");
+const containerCarousel = document.getElementById("container-carousel");
 
 
 arrowNext.onclick = function() {

@@ -510,7 +510,6 @@ header .grid-container-header .content-header-b img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  border-top: black 1px solid;
 }
 
 .carousel .flex-container-carousel .article-container img {
@@ -559,7 +558,9 @@ header .grid-container-header .content-header-b img {
 
 /*-----------LOGIN---------*/
 .login {
-  background: #1e4b45;
+  background: #96bc81;
+  background: -webkit-gradient(linear, left top, right top, color-stop(12%, #96bc81), color-stop(14%, #779f71), color-stop(38%, #769e70), color-stop(41%, #618a66), color-stop(67%, #346040), color-stop(69%, #2d5040), color-stop(91%, #264e45), color-stop(97%, #245152), color-stop(98%, #204d60), to(rgba(30, 75, 69, 0.8)));
+  background: linear-gradient(90deg, #96bc81 12%, #779f71 14%, #769e70 38%, #618a66 41%, #346040 67%, #2d5040 69%, #264e45 91%, #245152 97%, #204d60 98%, rgba(30, 75, 69, 0.8) 100%);
   margin: 100px 0;
   padding: 50px 5px;
   -webkit-transition: background 1s;
@@ -610,18 +611,23 @@ header .grid-container-header .content-header-b img {
 
 .login .flex-container-login .container-input label input {
   display: block;
-  height: 30px;
+  height: 40px;
   width: 100%;
   margin-top: 5px;
-  background: none;
+  background: rgba(250, 250, 250, 0.1);
+  border-radius: 25px;
   border: none;
-  border-bottom: 1px solid #e7ba52;
+  border: 1px solid #e7ba52;
+  padding-left: 15px;
 }
 
 .login .flex-container-login .container-input .container-terms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login .flex-container-login .container-input .container-terms input {

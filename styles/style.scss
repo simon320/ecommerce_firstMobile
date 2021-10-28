@@ -367,8 +367,6 @@ header {
             display: flex;
             flex-direction: column;
             width: 100vw;
-            
-            border-top: black 1px solid;
 
             img {
                 position: relative;
@@ -407,7 +405,10 @@ header {
 
 /*-----------LOGIN---------*/
 .login {
-    background: rgba(30,75,69,1);
+    background: rgb(150,188,129);
+    background: linear-gradient(90deg, rgba(150,188,129,1) 12%, rgba(119,159,113,1) 14%, rgba(118,158,112,1) 38%, rgba(97,138,102,1) 41%, rgba(52,96,64,1) 67%, rgba(45,80,64,1) 69%, rgba(38,78,69,1) 91%, rgba(36,81,82,1) 97%, rgba(32,77,96,1) 98%, rgba(30,75,69,0.8) 100%);
+    // background-image: url(../assets/img-login.jpg);
+    // background: rgba(30,75,69,1);
     margin: 100px 0;
     padding: 50px 5px;
     transition: background 1s;
@@ -441,18 +442,21 @@ header {
                 
                 input {
                     display: block;
-                    height: 30px;
+                    height: 40px;
                     width: 100%;
                     margin-top: 5px;
-                    background: none;
+                    background: rgba(250, 250, 250, .1);
+                    border-radius: 25px;
                     border: none;
-                    border-bottom: 1px solid #e7ba52;
+                    border: 1px solid #e7ba52;
+                    padding-left: 15px;
                 }
             }
 
         
             .container-terms {
                 display: flex;
+                justify-content: center;
                 
                 input {
                     width: auto;
