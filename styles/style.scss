@@ -84,7 +84,7 @@ header {
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 145vw;
+                height: 150vw;
                 width: 100%;
                 padding-top: 80px;
                 text-align: left;
@@ -99,6 +99,15 @@ header {
                     a {
                         color: #fff;
                     }
+                }
+            }
+
+            .icons-container {
+                display: flex;
+
+                .icons {
+                    width: 30px;
+                    fill: #fff;
                 }
             }
         }

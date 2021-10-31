@@ -13,7 +13,7 @@ menuIcon.onclick = function menuToggle() {
     {
         menuList.style.maxWidth = "0px";
     }
-};
+}
 
 
 // Icon like

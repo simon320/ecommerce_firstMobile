@@ -114,7 +114,7 @@ header nav .list-container ul {
   position: absolute;
   top: 0;
   left: 0;
-  height: 145vw;
+  height: 150vw;
   width: 100%;
   padding-top: 80px;
   text-align: left;
@@ -131,6 +131,17 @@ header nav .list-container ul li {
 
 header nav .list-container ul li a {
   color: #fff;
+}
+
+header nav .list-container .icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .list-container .icons-container .icons {
+  width: 30px;
+  fill: #fff;
 }
 
 header nav .buy-container {
