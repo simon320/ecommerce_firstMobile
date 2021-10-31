@@ -1,17 +1,30 @@
 // Menu mobile
-const menuList = document.getElementById("menuList");
+const menuBurger = document.getElementById("menuBurger");
 const menuIcon = document.getElementById("menuIcon");
+const bar = document.getElementsByClassName("bar");
+const imgHand = document.getElementById("imgHand");
 
-menuList.style.maxWidth = "0px";
+menuBurger.style.maxWidth = "0px";
 
 menuIcon.onclick = function menuToggle() {
-    if (menuList.style.maxWidth == "0px") 
+    if (menuBurger.style.maxWidth == "0px") 
     {
-        menuList.style.maxWidth = "100%";
+        bar[0].style.transform = "rotate(-45deg) translateY(0) translateX(0)";
+        bar[1].style.opacity = "0";
+        bar[2].style.transform = "rotate(45deg) translateY(0) translateX(0)";
+        imgHand.style.left = "50px";
+        imgHand.style.filter = "blur(1px)";
+        menuBurger.style.maxWidth = "100%";
+
     } 
     else 
     {
-        menuList.style.maxWidth = "0px";
+        bar[0].style.transform = "rotate(0deg) translateY(0) translateX(0)";
+        bar[1].style.opacity = "1";
+        bar[2].style.transform = "rotate(0deg) translateY(0) translateX(0)";
+        imgHand.style.left = "0";
+        imgHand.style.filter = "blur(0px)";
+        menuBurger.style.maxWidth = "0";
     }
 }
 
@@ -118,7 +131,7 @@ signIn.onclick = function() {
         signIn.style.borderBottom = "2px solid #e7ba52"
         buttons[1].style.display = "block"; 
         containerInput[0].style.justifyContent = "flex-start";
-        login[0].style.background = "linear-gradient(45deg, rgba(5,69,30,1) 0%, rgba(9,121,61,1) 53%, rgba(1,200,108,1) 100%)";
+        
         signInClick = 1;
 
         signUp.style.borderBottom = "none";
@@ -143,7 +156,7 @@ signUp.onclick = function() {
         nameUser[1].style.display = "block";
         terms.style.display = "flex"
         buttons[0].style.display = "block"; 
-        login[0].style.background = "linear-gradient(328deg, rgba(5,69,30,1) 0%, rgba(9,121,61,1) 53%, rgba(1,200,108,1) 100%)";
+        
         signUpClick = 1;
     }
 }
