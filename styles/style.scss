@@ -231,11 +231,23 @@ header {
 /*-----------PRODUCT---------*/
 .product {
 
-    h2  {
-        margin: 80px 10px 20px;
-        border-bottom: 1px solid rgb(150,188,129);
+    .flex-container-option {
+        width: 100%;
+
+        // h2  {
+        //     margin: 80px 5px 20px;
+        //     border-bottom: 1px solid rgb(150,188,129);
+        // }
+        .shop-option {
+            // position: absolute;
+            // bottom: 0;
+            // right: 0;
+            margin: 80px auto 20px;
+            width: 50px;
+            transform: scale(1.5);
+        }
     }
-    
+        
     .grid-container-product {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -603,6 +615,7 @@ footer {
         flex-direction: column;
 
         .f-item {
+            text-align: center;
             width: 50%;
             margin: 20px auto;
 
@@ -613,6 +626,16 @@ footer {
             p {
                 font-size: .8em;
                 color:#8a8a8a;
+            }
+            li {
+                list-style-type: none;
+                a {
+                    color:#8a8a8a;
+                    &:hover {
+                        text-decoration: underline;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
@@ -626,7 +649,8 @@ footer {
 
     .rights {
         text-align: center;
-        color:#8a8a8a;
         padding-bottom: 20px;
+        font-size: .8em;
+        color:#8a8a8a;
     }
 }
