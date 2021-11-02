@@ -39,15 +39,18 @@ shopOption[0].onclick = function(){
     if(option1 === 0 && option2 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.2)";
+        shopOption[0].style.background = "rgb(80, 182, 80)";
         shopOption[0].style.zIndex = "100";   
 
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveRight");
         shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1)"
+        shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
 
         option1 = 1;
@@ -57,16 +60,19 @@ shopOption[0].onclick = function(){
     else if(option1 === 0 && option3 === 1) {
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.2)";
+        shopOption[0].style.background = "rgb(80, 182, 80)";
         shopOption[0].style.zIndex = "100";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveRight");
         shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].classList.add("animated-moveRight");
         shopOption[2].style.transform = "scale(1)";
+        shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
 
         option1 = 1;
@@ -80,14 +86,17 @@ shopOption[1].onclick = function(){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].classList.add("animated-moveLeft");
         shopOption[0].style.transform = "scale(1.1)";
+        shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
+        shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.1)"
+        shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
 
         option1 = 0;
@@ -97,15 +106,18 @@ shopOption[1].onclick = function(){
     else if(option2 === 0 && option3 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.1)";
+        shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
+        shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].classList.add("animated-moveRight");
         shopOption[2].style.transform = "scale(1.1)"
+        shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
 
         option1 = 0;
@@ -118,16 +130,20 @@ shopOption[2].onclick = function(){
     if(option3 === 0 && option1 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].classList.add("animated-moveLeft");
+        shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.transform = "scale(1)";
+        
         shopOption[0].style.zIndex = "0";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveLeft");
         shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
+        shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
 
         option1 = 0;
@@ -137,15 +153,18 @@ shopOption[2].onclick = function(){
     else if(option3 === 0 && option2 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1)";
+        shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.zIndex = "0";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveLeft");
         shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
+        shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
 
         option1 = 0;

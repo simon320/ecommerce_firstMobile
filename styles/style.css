@@ -392,11 +392,12 @@ header .grid-container-header .content-header-b img {
           justify-content: center;
   width: 100%;
   height: 150px;
+  margin: auto;
 }
 
 .product .flex-container-option .shop-option {
-  position: absolute;
   width: 190px;
+  height: 50px;
   top: 0;
   margin: 80px 5px 20px;
   border-radius: 5px;
@@ -406,27 +407,31 @@ header .grid-container-header .content-header-b img {
 
 .product .flex-container-option .shop-option h3 {
   text-align: center;
+  margin: 8px auto;
+  color: #fff;
 }
 
 .product .flex-container-option .option1 {
+  position: absolute;
   z-index: 100;
-  left: 20px;
+  left: 15px;
   background-color: #50b650;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
 .product .flex-container-option .option2 {
+  position: relative;
   z-index: 50;
-  left: 70px;
   background-color: #347c34;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 .product .flex-container-option .option3 {
+  position: absolute;
   z-index: 0;
-  right: 0;
+  right: 15px;
   background-color: #265726;
 }
 
