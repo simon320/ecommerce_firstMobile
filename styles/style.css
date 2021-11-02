@@ -45,6 +45,11 @@ body {
   }
 }
 
+.animatedLeft {
+  -webkit-animation: showLeft 1s;
+          animation: showLeft 1s;
+}
+
 @-webkit-keyframes showRight {
   0% {
     -webkit-transform: translateX(50px);
@@ -67,14 +72,79 @@ body {
   }
 }
 
-.animatedLeft {
-  -webkit-animation: showLeft 1s;
-          animation: showLeft 1s;
-}
-
 .animatedRight {
   -webkit-animation: showRight 1s;
           animation: showRight 1s;
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.animated-moveRight {
+  -webkit-animation: moveRight 1s;
+          animation: moveRight 1s;
+}
+
+@-webkit-keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.animated-moveLeft {
+  -webkit-animation: moveLeft 1s;
+          animation: moveLeft 1s;
 }
 
 /*-----------MIXIN---------*/
@@ -313,14 +383,51 @@ header .grid-container-header .content-header-b img {
 
 /*-----------PRODUCT---------*/
 .product .flex-container-option {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  height: 150px;
 }
 
 .product .flex-container-option .shop-option {
-  margin: 80px auto 20px;
-  width: 50px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  position: absolute;
+  width: 190px;
+  top: 0;
+  margin: 80px 5px 20px;
+  border-radius: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.product .flex-container-option .shop-option h3 {
+  text-align: center;
+}
+
+.product .flex-container-option .option1 {
+  z-index: 100;
+  left: 20px;
+  background-color: #50b650;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.product .flex-container-option .option2 {
+  z-index: 50;
+  left: 70px;
+  background-color: #347c34;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.product .flex-container-option .option3 {
+  z-index: 0;
+  right: 0;
+  background-color: #265726;
 }
 
 .product .grid-container-product {

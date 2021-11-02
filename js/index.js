@@ -29,7 +29,135 @@ menuIcon.onclick = function menuToggle() {
 }
 
 
-// Icon like
+// Shop select(product)
+const shopOption = document.getElementsByClassName("shop-option");
+let option1 = 1; 
+let option2 = 0; 
+let option3 = 0; 
+
+shopOption[0].onclick = function(){
+    if(option1 === 0 && option2 === 1){
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].style.transform = "scale(1.2)";
+        shopOption[0].style.zIndex = "100";   
+
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].classList.add("animated-moveRight");
+        shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.zIndex = "50";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].style.transform = "scale(1)"
+        shopOption[2].style.zIndex = "0";
+
+        option1 = 1;
+        option2 = 0;
+        option3 = 0;
+    }
+    else if(option1 === 0 && option3 === 1) {
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].style.transform = "scale(1.2)";
+        shopOption[0].style.zIndex = "100";
+        
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].classList.add("animated-moveRight");
+        shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.zIndex = "50";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].classList.add("animated-moveRight");
+        shopOption[2].style.transform = "scale(1)";
+        shopOption[2].style.zIndex = "0";
+
+        option1 = 1;
+        option2 = 0;
+        option3 = 0;
+    }
+}
+    
+shopOption[1].onclick = function(){
+    if(option2 === 0 && option1 === 1){
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].classList.add("animated-moveLeft");
+        shopOption[0].style.transform = "scale(1.1)";
+        shopOption[0].style.zIndex = "50";
+        
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].style.transform = "scale(1.2)";
+        shopOption[1].style.zIndex = "100";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].style.transform = "scale(1.1)"
+        shopOption[2].style.zIndex = "50";
+
+        option1 = 0;
+        option2 = 1;
+        option3 = 0;
+    }
+    else if(option2 === 0 && option3 === 1){
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].style.transform = "scale(1.1)";
+        shopOption[0].style.zIndex = "50";
+        
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].style.transform = "scale(1.2)";
+        shopOption[1].style.zIndex = "100";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].classList.add("animated-moveRight");
+        shopOption[2].style.transform = "scale(1.1)"
+        shopOption[2].style.zIndex = "50";
+
+        option1 = 0;
+        option2 = 1;
+        option3 = 0;
+    }
+}
+
+shopOption[2].onclick = function(){
+    if(option3 === 0 && option1 === 1){
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].classList.add("animated-moveLeft");
+        shopOption[0].style.transform = "scale(1)";
+        shopOption[0].style.zIndex = "0";
+        
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].classList.add("animated-moveLeft");
+        shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.zIndex = "50";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].style.transform = "scale(1.2)"
+        shopOption[2].style.zIndex = "100";
+
+        option1 = 0;
+        option2 = 0;
+        option3 = 1;
+    } 
+    else if(option3 === 0 && option2 === 1){
+        shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[0].style.transform = "scale(1)";
+        shopOption[0].style.zIndex = "0";
+        
+        shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[1].classList.add("animated-moveLeft");
+        shopOption[1].style.transform = "scale(1.1)";
+        shopOption[1].style.zIndex = "50";
+        
+        shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
+        shopOption[2].style.transform = "scale(1.2)"
+        shopOption[2].style.zIndex = "100";
+
+        option1 = 0;
+        option2 = 0;
+        option3 = 1;
+    }
+}
+
+
+
+
+// Icon like(product)
 let heart = document.getElementsByClassName("bi-heart");
 let heartFill = document.getElementsByClassName("bi-heart-fill");
 let divLike = document.getElementsByClassName("like");
