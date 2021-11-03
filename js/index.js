@@ -200,6 +200,39 @@ for (let i=0; i<8; i++) {
 }
 
 
+// Show product(product)
+const containerProduct = document.getElementById("containerProduct");
+function showProduct() {
+    if (containerProduct.style.left == "0%")
+    {
+        containerProduct.style.left = "-100%"
+    }
+    else if (containerProduct.style.left == "-100%")
+    {
+        containerProduct.style.left = "-200%"
+    }
+    else 
+    {
+        containerProduct.style.left = "0%"
+    }
+} 
+
+arrowPrev.onclick = function() {
+    if (containerCarousel.style.left == "0%")
+    {
+        containerCarousel.style.left = "-200%"
+    }
+    else if (containerCarousel.style.left == "-200%")
+    {
+        containerCarousel.style.left = "-100%"
+    }
+    else 
+    {
+        containerCarousel.style.left = "0%"
+    }
+} 
+
+
 // Carousel
 const arrowPrev = document.getElementById("arrow-prev");
 const arrowNext = document.getElementById("arrow-next");
