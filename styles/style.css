@@ -441,10 +441,13 @@ header .grid-container-header .content-header-b img {
 }
 
 .product .flex-container-product {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 300vw;
+  -webkit-transition: left 1s;
+  transition: left 1s;
 }
 
 .product .flex-container-product .grid-container-product {
@@ -997,5 +1000,28 @@ footer .rights {
   padding-bottom: 20px;
   font-size: .8em;
   color: #8a8a8a;
+}
+
+.mediaNoSuport {
+  display: none;
+}
+
+@media (min-width: 541px) {
+  body {
+    overflow: hidden;
+  }
+  .mediaNoSuport {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background: #000;
+  }
+  .mediaNoSuport h2 {
+    color: #fff;
+  }
 }
 /*# sourceMappingURL=style.css.map */

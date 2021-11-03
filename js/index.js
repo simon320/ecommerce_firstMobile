@@ -31,53 +31,65 @@ menuIcon.onclick = function menuToggle() {
 
 // Shop select(product)
 const shopOption = document.getElementsByClassName("shop-option");
+const containerProduct = document.getElementById("containerProduct");
 let option1 = 1; 
 let option2 = 0; 
 let option3 = 0; 
+shopOption[0].style.cursor = "default";
+shopOption[1].style.cursor = "pointer";
+shopOption[2].style.cursor = "pointer";
 
 shopOption[0].onclick = function(){
     if(option1 === 0 && option2 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.2)";
         shopOption[0].style.background = "rgb(80, 182, 80)";
-        shopOption[0].style.zIndex = "100";   
+        shopOption[0].style.zIndex = "100";
+        shopOption[0].style.cursor = "default";   
 
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveRight");
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1)"
         shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
+        shopOption[2].style.cursor = "pointer";
 
         option1 = 1;
         option2 = 0;
         option3 = 0;
+        containerProduct.style.left = "0";
     }
     else if(option1 === 0 && option3 === 1) {
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.2)";
         shopOption[0].style.background = "rgb(80, 182, 80)";
         shopOption[0].style.zIndex = "100";
+        shopOption[0].style.cursor = "default";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveRight");
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].classList.add("animated-moveRight");
         shopOption[2].style.transform = "scale(1)";
         shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
+        shopOption[2].style.cursor = "pointer";
 
         option1 = 1;
         option2 = 0;
         option3 = 0;
+        containerProduct.style.left = "0";
     }
 }
     
@@ -88,41 +100,49 @@ shopOption[1].onclick = function(){
         shopOption[0].style.transform = "scale(1.1)";
         shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
+        shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
         shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
+        shopOption[1].style.cursor = "default";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.1)"
         shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
+        shopOption[2].style.cursor = "pointer";
 
         option1 = 0;
         option2 = 1;
         option3 = 0;
+        containerProduct.style.left = "-100%";
     }
     else if(option2 === 0 && option3 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1.1)";
         shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
+        shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
         shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
+        shopOption[1].style.cursor = "default";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].classList.add("animated-moveRight");
         shopOption[2].style.transform = "scale(1.1)"
         shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
+        shopOption[2].style.cursor = "pointer";
 
         option1 = 0;
         option2 = 1;
         option3 = 0;
+        containerProduct.style.left = "-100%";
     }
 }
 
@@ -132,48 +152,53 @@ shopOption[2].onclick = function(){
         shopOption[0].classList.add("animated-moveLeft");
         shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.transform = "scale(1)";
-        
         shopOption[0].style.zIndex = "0";
+        shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveLeft");
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
         shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
+        shopOption[2].style.cursor = "default";
 
         option1 = 0;
         option2 = 0;
         option3 = 1;
+        containerProduct.style.left = "-200%";
     } 
     else if(option3 === 0 && option2 === 1){
         shopOption[0].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[0].style.transform = "scale(1)";
         shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.zIndex = "0";
+        shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].classList.add("animated-moveLeft");
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
         shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
+        shopOption[2].style.cursor = "default";
 
         option1 = 0;
         option2 = 0;
         option3 = 1;
+        containerProduct.style.left = "-200%";
     }
 }
-
-
 
 
 // Icon like(product)
@@ -182,7 +207,7 @@ let heartFill = document.getElementsByClassName("bi-heart-fill");
 let divLike = document.getElementsByClassName("like");
 
 
-for (let i=0; i<8; i++) {
+for (let i=0; i<24; i++) {
     heart[i].style.display = "block";
     heartFill[i].style.display = "none";
     divLike[i].onclick = function () {
@@ -200,39 +225,6 @@ for (let i=0; i<8; i++) {
 }
 
 
-// Show product(product)
-const containerProduct = document.getElementById("containerProduct");
-function showProduct() {
-    if (containerProduct.style.left == "0%")
-    {
-        containerProduct.style.left = "-100%"
-    }
-    else if (containerProduct.style.left == "-100%")
-    {
-        containerProduct.style.left = "-200%"
-    }
-    else 
-    {
-        containerProduct.style.left = "0%"
-    }
-} 
-
-arrowPrev.onclick = function() {
-    if (containerCarousel.style.left == "0%")
-    {
-        containerCarousel.style.left = "-200%"
-    }
-    else if (containerCarousel.style.left == "-200%")
-    {
-        containerCarousel.style.left = "-100%"
-    }
-    else 
-    {
-        containerCarousel.style.left = "0%"
-    }
-} 
-
-
 // Carousel
 const arrowPrev = document.getElementById("arrow-prev");
 const arrowNext = document.getElementById("arrow-next");
@@ -242,15 +234,15 @@ const containerCarousel = document.getElementById("container-carousel");
 arrowNext.onclick = function() {
     if (containerCarousel.style.left == "0%")
     {
-        containerCarousel.style.left = "-100%"
+        containerCarousel.style.left = "-100%";
     }
     else if (containerCarousel.style.left == "-100%")
     {
-        containerCarousel.style.left = "-200%"
+        containerCarousel.style.left = "-200%";
     }
     else 
     {
-        containerCarousel.style.left = "0%"
+        containerCarousel.style.left = "0%";
     }
 } 
 

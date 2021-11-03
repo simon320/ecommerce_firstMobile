@@ -296,8 +296,10 @@ header {
     }
        
     .flex-container-product {
+        position: relative;
         display: flex;
         width: 300vw;
+        transition: left 1s;
 
         .grid-container-product {
             display: grid;
@@ -704,5 +706,28 @@ footer {
         padding-bottom: 20px;
         font-size: .8em;
         color:#8a8a8a;
+    }
+}
+
+.mediaNoSuport {
+    display: none;
+}
+
+@media (min-width: 541px) {
+    body {
+        overflow: hidden;
+    }
+    .mediaNoSuport {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        background: #000;
+        h2 {
+            color: #fff;
+        }
     }
 }
