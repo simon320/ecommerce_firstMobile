@@ -147,6 +147,76 @@ body {
           animation: moveLeft 1s;
 }
 
+@-webkit-keyframes likeHeart {
+  0% {
+    opacity: .6;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes likeHeart {
+  0% {
+    opacity: .6;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animated-likeHeart {
+  -webkit-animation: likeHeart 1s forwards;
+          animation: likeHeart 1s forwards;
+}
+
+@-webkit-keyframes dontLikeHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes dontLikeHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animated-dontLikeHeart {
+  -webkit-animation: dontLikeHeart 1s forwards;
+          animation: dontLikeHeart 1s forwards;
+}
+
 /*-----------MIXIN---------*/
 /*-----------HEADER---------*/
 header {
@@ -571,7 +641,6 @@ header .grid-container-header .content-header-b img {
 
 .product .flex-container-product .grid-container-product .item-product .like .bi-heart-fill {
   color: #a10707;
-  opacity: 1;
 }
 
 .product .flex-container-product .grid-container-product .item1 {
@@ -827,6 +896,22 @@ header .grid-container-header .content-header-b img {
   border: none;
   border: 1px solid #e7ba52;
   padding-left: 15px;
+}
+
+.login .flex-container-login .container-input label input::-webkit-input-placeholder {
+  color: #d3d3d3;
+}
+
+.login .flex-container-login .container-input label input:-ms-input-placeholder {
+  color: #d3d3d3;
+}
+
+.login .flex-container-login .container-input label input::-ms-input-placeholder {
+  color: #d3d3d3;
+}
+
+.login .flex-container-login .container-input label input::placeholder {
+  color: #d3d3d3;
 }
 
 .login .flex-container-login .container-input .container-terms {

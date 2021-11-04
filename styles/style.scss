@@ -57,6 +57,39 @@ body {
 .animated-moveLeft {
     animation: moveLeft 1s;
 }
+
+@keyframes likeHeart {
+    0% {
+        opacity: .6;
+        transform: scale(.6);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+.animated-likeHeart {
+    animation: likeHeart 1s forwards;
+}
+
+@keyframes dontLikeHeart {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    
+}
+.animated-dontLikeHeart {
+    animation: dontLikeHeart 1s forwards;
+}
 /*-----------MIXIN---------*/
 @mixin btn {
     display: inline-block;
@@ -392,7 +425,6 @@ header {
                                 
                                 .bi-heart-fill {
                                     color: rgb(161, 7, 7);
-                                    opacity: 1;
                                 }
                         }
             }
@@ -485,7 +517,7 @@ header {
         .article-container {
             display: flex;
             flex-direction: column;
-            width: 100vw;..
+            width: 100vw;
 
             img {
                 position: relative;
@@ -571,6 +603,9 @@ header {
                     border: none;
                     border: 1px solid #e7ba52;
                     padding-left: 15px;
+                    &::placeholder {
+                        color:#d3d3d3;
+                    }
                 }
             }
 

@@ -209,17 +209,19 @@ let divLike = document.getElementsByClassName("like");
 
 for (let i=0; i<24; i++) {
     heart[i].style.display = "block";
-    heartFill[i].style.display = "none";
+    heartFill[i].style.opacity = "0";
     divLike[i].onclick = function () {
         if (heart[i].style.display == "block") 
         {
             heart[i].style.display = "none";
-            heartFill[i].style.display = "block";
+            heartFill[i].classList.remove("animated-dontLikeHeart");
+            heartFill[i].classList.add("animated-likeHeart");
         }
         else 
         {
             heart[i].style.display = "block";
-            heartFill[i].style.display = "none";
+            heartFill[i].classList.remove("animated-likeHeart");
+            heartFill[i].classList.add("animated-dontLikeHeart");
         }
     }
 }
