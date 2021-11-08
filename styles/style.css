@@ -401,7 +401,7 @@ header .grid-container-header .content-header-a p {
 header .grid-container-header .content-header-a .btn {
   display: inline-block;
   background: #e7ba52;
-  color: #fff;
+  color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;
   border-radius: 25px;
@@ -413,6 +413,7 @@ header .grid-container-header .content-header-a .btn {
 
 header .grid-container-header .content-header-a .btn:hover {
   background: none;
+  color: #fff;
 }
 
 header .grid-container-header .content-header-b {
@@ -816,6 +817,7 @@ header .grid-container-header .content-header-b img {
 .carousel .flex-container-carousel .article-container .carousel-caption {
   background: #065a31;
   background: linear-gradient(20deg, #1e4b45 0%, #96bc81 199%);
+  background: #5F865F;
   -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
           box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
   width: 100vw;
@@ -838,7 +840,7 @@ header .grid-container-header .content-header-b img {
 .carousel .flex-container-carousel .article-container .carousel-caption .btn {
   display: inline-block;
   background: #e7ba52;
-  color: #fff;
+  color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;
   border-radius: 25px;
@@ -850,6 +852,7 @@ header .grid-container-header .content-header-b img {
 
 .carousel .flex-container-carousel .article-container .carousel-caption .btn:hover {
   background: none;
+  color: #fff;
 }
 
 /*-----------LOGIN---------*/
@@ -974,7 +977,7 @@ header .grid-container-header .content-header-b img {
 .login .flex-container-login .container-buttons button {
   display: inline-block;
   background: #e7ba52;
-  color: #fff;
+  color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;
   border-radius: 25px;
@@ -985,6 +988,7 @@ header .grid-container-header .content-header-b img {
 
 .login .flex-container-login .container-buttons button:hover {
   background: none;
+  color: #fff;
 }
 
 /*-----------HAPPY CUSTOMERS---------*/
