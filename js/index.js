@@ -207,7 +207,7 @@ let heartFill = document.getElementsByClassName("bi-heart-fill");
 let divLike = document.getElementsByClassName("like");
 
 
-for (let i=0; i<24; i++) {
+for (let i=0; i<25; i++) {
     heart[i].style.display = "block";
     heartFill[i].style.opacity = "0";
     divLike[i].onclick = function () {

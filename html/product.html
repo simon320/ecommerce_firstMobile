@@ -15,27 +15,43 @@
         <div class="flex-container-page">
 
             <div class="flex-container-nav">
-                <a href="">
+                <a class="container-a" href="https://ecommerce-first-mobile.vercel.app/">
                     <i class="bi bi-arrow-left arrow-product"></i>
                 </a> 
 
-                <a id="buyContainer" href="#">
-                    <img class="buy-icon" src="/assets/carretilla.png" alt="">
+                <a class="container-a" id="buyContainer" href="#">
+                    <img class="buy-icon" src="../assets/carretilla-negra.png" alt="">
                 </a>
             </div>
 
-            <img src="/assets/img1-PsatoDeAgua.png" alt="">
+            <div class="price">
+                <p>$450.00</p>  
+            </div>
+
+            <img class="product-img" src="/assets/img1-PsatoDeAgua.png" alt="">
+
             <div class="flex-container-description">
-                <h2></h2>
+                <h2>Aloe Vera</h2>
+                <span>Interior</span>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, possimus sapiente! Aut repellendus voluptates numquam sed itaque, nam corrupti dolorum amet quisquam assumenda provident enim eaque est voluptatem cupiditate unde.</p>
 
-                <div class="buttons"></div>
+                <div class="buttons">
+
+                    <div id="like" class="like">
+                        <i id="heart" class="bi bi-heart" aria-hidden="true"></i>
+                        <i id="heartFill" class="bi bi-heart-fill" aria-hidden="true"></i>
+                    </div>
+
+                    <button>Agregar al carrito</button>
+
+                </div>
             </div>
 
         </div>
 
     </main>
 
+    <script src="../js/product.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 /*-----------FONTs---------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+html {
+    font-family: 'Poppins', sans-serif;
+}
 
 /*-----------RESETs---------*/
 * {
@@ -18,27 +20,191 @@ body {
 }
 
 
+/*-----------MIXIN---------*/
+@mixin btn {
+    display: inline-block;
+    background: #e7ba52;
+    font-size: 1em;
+    font-weight: bold;
+    color: #425e42;
+    padding: 8px 30px;
+    border: 2.5px solid #e7ba52;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background .5s;
+    &:hover{
+        background: none;
+        color: #fff;
+    } 
+}
+
+
+/*-----------ANIMATION---------*/
+@keyframes likeHeart {
+    0% {
+        opacity: .6;
+        transform: scale(.6);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+.animated-likeHeart {
+    animation: likeHeart 1s forwards;
+}
+
+@keyframes dontLikeHeart {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    
+}
+.animated-dontLikeHeart {
+    animation: dontLikeHeart 1s forwards;
+}
+
 /*-----------PAGE---------*/
+main {
+    width: 100vw;
+    overflow: hidden;
+}
+
 .flex-container-page {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background: #d3d3d3;
+    overflow-x: hidden;
+    background: #c6e6cb;
 
     .flex-container-nav {
+        position: relative;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        align-items: center;
+        width: 100vw;
+        height: 40px;
+        margin-top: 20px;
 
-        i {
-            width: 55px;
+        .container-a {
+            width: 50px;
+            margin: 15px;
+
+        }  
+            .arrow-product {
+                font-size: 1.8em;
+                color: #484848;
+            }
+            
+            .buy-icon {
+                align-self: flex-start;
+                width: 45px;
+            }
+        
+    }
+
+    .price {
+        position: relative;
+        top: 15vh;
+        align-self: flex-start;
+        margin: 5vw;
+        background: green;
+        border-radius: 15px 0 15px 0;
+        padding: 8px 10px;
+
+        p {
+            color: honeydew;
         }
-        a {
+    }
 
-            img {
-                width: 55px;
+    .product-img {
+        position: absolute;
+        z-index: 100;
+        align-self: flex-end;
+        top: 13vh;
+        width: 21vh;
+        margin: 0 30px;
+    }
+
+    .flex-container-description {
+        justify-self: flex-end;
+
+        position: relative;
+        bottom: 20px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        margin: 5vw 5vw 0;
+        background: rgb(255, 255, 255);
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px #838282 ;
+
+        h2 {
+            color: rgb(42, 90, 42);
+            margin: 15px 15px 0;
+        }
+        span {
+            color: rgb(148, 144, 144);
+            font-size: .8em;
+            margin: 0 15px 10px;
+        }
+        p {
+            color: rgb(107, 106, 106);
+            font-size: .8em;
+            text-align: justify;
+            margin: 12px 15px;
+        }
+
+        .buttons {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+            .like {
+                position: relative; 
+                width: 30px;
+                height: 30px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 15px;
+                box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    i {
+                        position: absolute;
+                        top: 4px;
+                        transform-origin: center;
+                        transform: scale(.8);
+                        opacity: .3;
+                    }
+                    
+                    .bi-heart-fill {
+                        color: rgb(151, 42, 42);
+                    }
+            }
+
+            button {
+                @include btn;
+
             }
         }
     }

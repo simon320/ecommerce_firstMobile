@@ -1,5 +1,9 @@
 /*-----------FONTs---------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
 /*-----------RESETs---------*/
 * {
   margin: 0;
@@ -16,8 +20,85 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/*-----------MIXIN---------*/
+/*-----------ANIMATION---------*/
+@-webkit-keyframes likeHeart {
+  0% {
+    opacity: .6;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes likeHeart {
+  0% {
+    opacity: .6;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animated-likeHeart {
+  -webkit-animation: likeHeart 1s forwards;
+          animation: likeHeart 1s forwards;
+}
+
+@-webkit-keyframes dontLikeHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes dontLikeHeart {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animated-dontLikeHeart {
+  -webkit-animation: dontLikeHeart 1s forwards;
+          animation: dontLikeHeart 1s forwards;
+}
+
 /*-----------PAGE---------*/
+main {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .flex-container-page {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,27 +106,178 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
-  background: #d3d3d3;
+  overflow-x: hidden;
+  background: #c6e6cb;
 }
 
 .flex-container-page .flex-container-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 40px;
+  margin-top: 20px;
 }
 
-.flex-container-page .flex-container-nav i {
-  width: 55px;
+.flex-container-page .flex-container-nav .container-a {
+  width: 50px;
+  margin: 15px;
 }
 
-.flex-container-page .flex-container-nav a img {
-  width: 55px;
+.flex-container-page .flex-container-nav .arrow-product {
+  font-size: 1.8em;
+  color: #484848;
+}
+
+.flex-container-page .flex-container-nav .buy-icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 45px;
+}
+
+.flex-container-page .price {
+  position: relative;
+  top: 15vh;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5vw;
+  background: green;
+  border-radius: 15px 0 15px 0;
+  padding: 8px 10px;
+}
+
+.flex-container-page .price p {
+  color: honeydew;
+}
+
+.flex-container-page .product-img {
+  position: absolute;
+  z-index: 100;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  top: 13vh;
+  width: 21vh;
+  margin: 0 30px;
+}
+
+.flex-container-page .flex-container-description {
+  justify-self: flex-end;
+  position: relative;
+  bottom: 20px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5vw 5vw 0;
+  background: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 10px #838282;
+          box-shadow: 1px 1px 10px #838282;
+}
+
+.flex-container-page .flex-container-description h2 {
+  color: #2a5a2a;
+  margin: 15px 15px 0;
+}
+
+.flex-container-page .flex-container-description span {
+  color: #949090;
+  font-size: .8em;
+  margin: 0 15px 10px;
+}
+
+.flex-container-page .flex-container-description p {
+  color: #6b6a6a;
+  font-size: .8em;
+  text-align: justify;
+  margin: 12px 15px;
+}
+
+.flex-container-page .flex-container-description .buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.flex-container-page .flex-container-description .buttons .like {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+}
+
+.flex-container-page .flex-container-description .buttons .like:hover {
+  cursor: pointer;
+}
+
+.flex-container-page .flex-container-description .buttons .like i {
+  position: absolute;
+  top: 4px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: .3;
+}
+
+.flex-container-page .flex-container-description .buttons .like .bi-heart-fill {
+  color: #972a2a;
+}
+
+.flex-container-page .flex-container-description .buttons button {
+  display: inline-block;
+  background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
+  color: #425e42;
+  padding: 8px 30px;
+  border: 2.5px solid #e7ba52;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+.flex-container-page .flex-container-description .buttons button:hover {
+  background: none;
+  color: #fff;
 }
 /*# sourceMappingURL=product.css.map */
