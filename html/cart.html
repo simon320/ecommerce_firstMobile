@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" integrity="sha384-tKLJeE1ALTUwtXlaGjJYM3sejfssWdAaWR2s97axw4xkiAdMzQjtOjgcyw0Y50KU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <title>Ecommerce | Dale Vida</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="flex-container-nav">
+            <a class="container-a" href="https://ecommerce-first-mobile.vercel.app/">
+                <i class="bi bi-arrow-left arrow-product"></i>
+            </a> 
+
+            <a class="container-a" id="buyContainer" href="#">
+                <img class="buy-icon" src="../assets/carretilla-negra.png" alt="">
+            </a>
+        </div>
+
+
+
+        <div class="flex-container-items">
+
+            <div class="item-cart">
+
+                <img class="item-img" src="../assets/img1-small.png" alt="">
+
+                <div class="label-contain">
+                    <h3>Aloe Vera</h3>
+                    <p>Plantas/Interior</p>
+                    <span>$450.00</span>
+                </div>
+
+                <div class="buttons-item">
+                    <button id="remove">X</button>
+
+                    <div class="items-amount">
+                        <button id="subtract">-</button>
+                        <span>1</span>
+                        <button id="add">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item-cart">
+
+                <img class="item-img" src="../assets/img2-small.png" alt="">
+
+                <div class="label-contain">
+                    <h3>Helecho</h3>
+                    <p>Plantas/Interior</p>
+                    <span>$600.00</span>
+                </div>
+
+                <div class="buttons-item">
+                    <button id="remove">X</button>
+
+                    <div class="items-amount">
+                        <button id="subtract">-</button>
+                        <span>1</span>
+                        <button id="add">+</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="item-cart">
+
+                <img class="item-img" src="../assets/img3-small.png" alt="">
+
+                <div class="label-contain">
+                    <h3>Caña Interior</h3>
+                    <p>Plantas/Interior</p>
+                    <span>$550.00</span>
+                </div>
+
+                <div class="buttons-item">
+                    <button id="remove">X</button>
+
+                    <div class="items-amount">
+                        <button id="subtract">-</button>
+                        <span>1</span>
+                        <button id="add">+</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <p id="totalPrice">Precio total <span>$4500.00</span></p>
+
+        <button id="toBuy">COMPRAR</button>
+
+    </main>
+
+</body>
+</html>

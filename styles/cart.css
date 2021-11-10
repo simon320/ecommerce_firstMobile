@@ -1,0 +1,182 @@
+/*-----------FONTs---------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*-----------RESETs---------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*-----------MIXIN---------*/
+/*-----------PAGE---------*/
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background: #90c090;
+}
+
+main .flex-container-nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 40px;
+  margin-top: 20px;
+}
+
+main .flex-container-nav .container-a {
+  width: 50px;
+  margin: 15px;
+}
+
+main .flex-container-nav .arrow-product {
+  font-size: 1.8em;
+  color: #484848;
+}
+
+main .flex-container-nav .buy-icon {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 45px;
+}
+
+main .flex-container-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+}
+
+main .flex-container-items .item-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 90%;
+  height: 120px;
+  margin: 15px auto 0;
+  border-radius: 15px;
+  background: honeydew;
+  -webkit-box-shadow: 0 1px 4px;
+          box-shadow: 0 1px 4px;
+}
+
+main .flex-container-items .item-cart .item-img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 70px;
+  height: 90%;
+}
+
+main .flex-container-items .item-cart .label-contain {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .flex-container-items .item-cart .label-contain h3 {
+  font-size: 1.2em;
+}
+
+main .flex-container-items .item-cart .label-contain p {
+  font-size: .8em;
+  color: #747171;
+}
+
+main .flex-container-items .item-cart .label-contain span {
+  display: block;
+  font-weight: bold;
+  margin: 15px 15px 0;
+}
+
+main .flex-container-items .item-cart .buttons-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .flex-container-items .item-cart .buttons-item #remove {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 20px;
+  margin: 10px;
+}
+
+main .flex-container-items .item-cart .buttons-item .items-amount {
+  margin: 10px;
+}
+
+main .flex-container-items .item-cart .buttons-item .items-amount #subtract, main .flex-container-items .item-cart .buttons-item .items-amount #add {
+  width: 18px;
+}
+
+main #totalPrice {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 40px 15px;
+}
+
+main #totalPrice span {
+  font-weight: bold;
+}
+
+main #toBuy {
+  display: inline-block;
+  background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
+  color: #425e42;
+  padding: 8px 30px;
+  border: 2.5px solid #e7ba52;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  margin: 0 10px 30px;
+}
+
+main #toBuy:hover {
+  background: none;
+  color: #fff;
+}
+/*# sourceMappingURL=cart.css.map */
