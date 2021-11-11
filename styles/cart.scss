@@ -44,8 +44,8 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background: rgb(144, 192, 144);
+    min-height: 100vh;
+    background: rgb(46, 66, 46);
 
     .flex-container-nav {
         position: relative;
@@ -54,22 +54,25 @@ main {
         align-items: center;
         width: 100vw;
         height: 40px;
+        padding-right: 20px;
         margin-top: 20px;
 
         .container-a {
             width: 50px;
             margin: 15px;
 
-        }  
             .arrow-product {
                 font-size: 1.8em;
-                color: #484848;
+                color: #ffffff;
             }
+        }  
             
-            .buy-icon {
-                align-self: flex-start;
-                width: 45px;
-            }
+        #cleanButton {
+            @include btn;
+            align-self: flex-start;
+            transform-origin: right;
+            transform: scale(.8);
+        }
         
     }
 
@@ -78,15 +81,27 @@ main {
         flex-direction: column;
         width: 100vw;
 
+        .container-empty {
+            align-self: center;
+            width: 80%;
+            margin: 130px auto;
+
+
+            h3 {
+                text-align: center;
+                color: #d3d3d3;
+            }
+        }
         .item-cart {
             display: flex;
             justify-content: space-evenly;
             width: 90%;
             height: 120px;
             margin: 15px auto 0;
+            outline: 2px solid #e7ba52c2;
             border-radius: 15px;
-            background: honeydew;
-            box-shadow: 0 1px 4px;
+            background: rgb(255, 255, 255);
+            box-shadow: 4px 4px 8px;
 
             .item-img {
                 align-self: center;
@@ -106,8 +121,9 @@ main {
                 }
                 span {
                     display: block;
-                    font-weight: bold;
                     margin: 15px 15px 0;
+                    font-weight: bold;
+                    color: rgb(82, 82, 82);
                 }
             }
 
@@ -115,29 +131,39 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                
 
-                #remove {
+                .remove-item {
                     align-self: flex-end;
-                    width: 20px;
+                    width: 30px;
+                    height: 30px;
                     margin: 10px;
+                    border: 1px solid rgba(107, 107, 107, 0.432);
+                    border-radius: 15px;
+                    box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
                 }
                 .items-amount {
                     margin: 10px;
 
-                    #subtract, #add {
-                        width: 18px;
+                    .subtractAmount, .addAmount {
+                        width: 24px;
+                        border: 1px solid rgba(107, 107, 107, 0.432);
+                        border-radius: 15px;
+                        box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
                     }
                 }
             }
         }
     }
 
-    #totalPrice {
+    .total-price {
         align-self: flex-end;
         margin: 40px 15px;
-
+        color: #d3d3d3;
+        
         span {
-            font-weight: bold
+            font-weight: bold;
+            color: #e7ba52;
         }
     }
 

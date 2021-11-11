@@ -30,8 +30,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
-  background: #90c090;
+  min-height: 100vh;
+  background: #2e422e;
 }
 
 main .flex-container-nav {
@@ -47,6 +47,7 @@ main .flex-container-nav {
           align-items: center;
   width: 100vw;
   height: 40px;
+  padding-right: 20px;
   margin-top: 20px;
 }
 
@@ -55,15 +56,34 @@ main .flex-container-nav .container-a {
   margin: 15px;
 }
 
-main .flex-container-nav .arrow-product {
+main .flex-container-nav .container-a .arrow-product {
   font-size: 1.8em;
-  color: #484848;
+  color: #ffffff;
 }
 
-main .flex-container-nav .buy-icon {
+main .flex-container-nav #cleanButton {
+  display: inline-block;
+  background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
+  color: #425e42;
+  padding: 8px 30px;
+  border: 2.5px solid #e7ba52;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: background .5s;
+  transition: background .5s;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  width: 45px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+main .flex-container-nav #cleanButton:hover {
+  background: none;
+  color: #fff;
 }
 
 main .flex-container-items {
@@ -77,6 +97,19 @@ main .flex-container-items {
   width: 100vw;
 }
 
+main .flex-container-items .container-empty {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 80%;
+  margin: 130px auto;
+}
+
+main .flex-container-items .container-empty h3 {
+  text-align: center;
+  color: #d3d3d3;
+}
+
 main .flex-container-items .item-cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,10 +120,11 @@ main .flex-container-items .item-cart {
   width: 90%;
   height: 120px;
   margin: 15px auto 0;
+  outline: 2px solid #e7ba52c2;
   border-radius: 15px;
-  background: honeydew;
-  -webkit-box-shadow: 0 1px 4px;
-          box-shadow: 0 1px 4px;
+  background: white;
+  -webkit-box-shadow: 4px 4px 8px;
+          box-shadow: 4px 4px 8px;
 }
 
 main .flex-container-items .item-cart .item-img {
@@ -118,8 +152,9 @@ main .flex-container-items .item-cart .label-contain p {
 
 main .flex-container-items .item-cart .label-contain span {
   display: block;
-  font-weight: bold;
   margin: 15px 15px 0;
+  font-weight: bold;
+  color: #525252;
 }
 
 main .flex-container-items .item-cart .buttons-item {
@@ -135,29 +170,40 @@ main .flex-container-items .item-cart .buttons-item {
           justify-content: space-between;
 }
 
-main .flex-container-items .item-cart .buttons-item #remove {
+main .flex-container-items .item-cart .buttons-item .remove-item {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 20px;
+  width: 30px;
+  height: 30px;
   margin: 10px;
+  border: 1px solid rgba(107, 107, 107, 0.432);
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
 }
 
 main .flex-container-items .item-cart .buttons-item .items-amount {
   margin: 10px;
 }
 
-main .flex-container-items .item-cart .buttons-item .items-amount #subtract, main .flex-container-items .item-cart .buttons-item .items-amount #add {
-  width: 18px;
+main .flex-container-items .item-cart .buttons-item .items-amount .subtractAmount, main .flex-container-items .item-cart .buttons-item .items-amount .addAmount {
+  width: 24px;
+  border: 1px solid rgba(107, 107, 107, 0.432);
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
 }
 
-main #totalPrice {
+main .total-price {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 40px 15px;
+  color: #d3d3d3;
 }
 
-main #totalPrice span {
+main .total-price span {
   font-weight: bold;
+  color: #e7ba52;
 }
 
 main #toBuy {
