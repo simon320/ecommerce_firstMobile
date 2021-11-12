@@ -91,9 +91,26 @@ body {
     animation: dontLikeHeart 1s forwards;
 }
 /*-----------MIXIN---------*/
+// @mixin btn {
+//     display: inline-block;
+//     background: #e7ba52;
+//     color: #425e42;
+//     padding: 8px 30px;
+//     border: 2.5px solid #e7ba52;
+//     border-radius: 25px;
+//     cursor: pointer;
+//     transition: background .5s;
+//     &:hover{
+//         background: none;
+//         color: #fff;
+//     } 
+// }
+
 @mixin btn {
     display: inline-block;
     background: #e7ba52;
+    font-size: 1em;
+    font-weight: bold;
     color: #425e42;
     padding: 8px 30px;
     border: 2.5px solid #e7ba52;
@@ -434,7 +451,7 @@ header {
                                 }
                                 i {
                                     position: absolute;
-                                    top: 4px;
+                                    top: 4px;     
                                     transform: scale(.8);
                                     opacity: .3;
                                 }

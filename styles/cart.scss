@@ -45,7 +45,8 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: rgb(46, 66, 46);
+    background: rgb(30,75,69);
+    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 159%);
 
     .flex-container-nav {
         position: relative;
@@ -89,7 +90,7 @@ main {
 
             h3 {
                 text-align: center;
-                color: #d3d3d3;
+                color: #ffffff;
             }
         }
         .item-cart {
@@ -98,31 +99,39 @@ main {
             width: 90%;
             height: 120px;
             margin: 15px auto 0;
-            outline: 2px solid #e7ba52c2;
             border-radius: 15px;
             background: rgb(255, 255, 255);
-            box-shadow: 4px 4px 8px;
 
             .item-img {
                 align-self: center;
                 width: 70px;
-                height: 90%;
+                max-height: 90%;
+                flex-basis: 10%;
             }
 
             .label-contain {
+                position: relative;
                 align-self: center;
+                flex-basis: 40%;
+                height: 100%;
 
                 h3 {
-                    font-size: 1.2em;
+                    text-align: left;
+                    color: rgb(43, 124, 70);
+                    font-size: 1.1em;
                 }
                 p {
+                    text-align: left;
                     font-size: .8em;
                     color: #747171;
                 }
                 span {
+                    position: absolute;
+                    right: 0;
+                    bottom: 7px;
+                    text-align: right;
                     display: block;
-                    margin: 15px 15px 0;
-                    font-weight: bold;
+                    font-weight: 600;
                     color: rgb(82, 82, 82);
                 }
             }
@@ -131,25 +140,36 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                flex-basis: 35%;
                 
 
                 .remove-item {
                     align-self: flex-end;
-                    width: 30px;
-                    height: 30px;
+                    width: 22px;
+                    height: 22px;
                     margin: 10px;
-                    border: 1px solid rgba(107, 107, 107, 0.432);
+                    text-align: center;
+                    padding-bottom: 2px;
+                    border: 1px solid rgba(107, 107, 107, 0.26);
+                    
                     border-radius: 15px;
-                    box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
+                    box-shadow: 2px 2px 5px rgba(13, 39, 80, .16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, .16), inset -2px -1px 2px #fff;
                 }
                 .items-amount {
-                    margin: 10px;
+                    float: right;
+                    margin: 10px 0 10px 20px;
 
+                    .amount {
+                        margin: 0 3px;
+                        color: #c08702;
+                    }
                     .subtractAmount, .addAmount {
-                        width: 24px;
-                        border: 1px solid rgba(107, 107, 107, 0.432);
+                        width: 22px;
+                        height: 22px;
+                        border: 1px solid rgba(107, 107, 107, 0.219);
+                        
                         border-radius: 15px;
-                        box-shadow: 3px 3px 5px rgba(13, 39, 80, .16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, .16), inset -3px -3px 5px #fff;
+                        box-shadow: 2px 2px 5px rgba(13, 39, 80, .16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, .16), inset -2px -1px 2px #fff;
                     }
                 }
             }

@@ -265,24 +265,24 @@ arrowPrev.onclick = function() {
 
 
 // Ghost Effect
-let ghostEffect = document.querySelectorAll(".effect");
+// let ghostEffect = document.querySelectorAll(".effect");
 
-function showScroll() {
-    let scrollTop = document.documentElement.scrollTop;
-    for (let i=0; i<ghostEffect.length; i++){
-        let topAnimated = ghostEffect[i].offsetTop;
-        if(topAnimated - 500 < scrollTop){
-            ghostEffect[i].style.opacity = 1;
-            if((i % 2) == 0){
-                ghostEffect[i].classList.add("animatedLeft");
-            } else{
-                ghostEffect[i].classList.add("animatedRight");
-            }
-        }
-    }
-}
+// function showScroll() {
+//     let scrollTop = document.documentElement.scrollTop;
+//     for (let i=0; i<ghostEffect.length; i++){
+//         let topAnimated = ghostEffect[i].offsetTop;
+//         if(topAnimated - 500 < scrollTop){
+//             ghostEffect[i].style.opacity = 1;
+//             if((i % 2) == 0){
+//                 ghostEffect[i].classList.add("animatedLeft");
+//             } else{
+//                 ghostEffect[i].classList.add("animatedRight");
+//             }
+//         }
+//     }
+// }
 
-window.addEventListener('scroll', showScroll);
+// window.addEventListener('scroll', showScroll);
 
 
 // Login

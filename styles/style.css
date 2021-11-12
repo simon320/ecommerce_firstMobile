@@ -401,6 +401,8 @@ header .grid-container-header .content-header-a p {
 header .grid-container-header .content-header-a .btn {
   display: inline-block;
   background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
   color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;
@@ -840,6 +842,8 @@ header .grid-container-header .content-header-b img {
 .carousel .flex-container-carousel .article-container .carousel-caption .btn {
   display: inline-block;
   background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
   color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;
@@ -977,6 +981,8 @@ header .grid-container-header .content-header-b img {
 .login .flex-container-login .container-buttons button {
   display: inline-block;
   background: #e7ba52;
+  font-size: 1em;
+  font-weight: bold;
   color: #425e42;
   padding: 8px 30px;
   border: 2.5px solid #e7ba52;

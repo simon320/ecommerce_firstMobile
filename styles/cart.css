@@ -31,7 +31,9 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background: #2e422e;
+  background: #1e4b45;
+  background: -webkit-gradient(linear, left top, right top, from(#1e4b45), color-stop(159%, #96bc81));
+  background: linear-gradient(90deg, #1e4b45 0%, #96bc81 159%);
 }
 
 main .flex-container-nav {
@@ -107,7 +109,7 @@ main .flex-container-items .container-empty {
 
 main .flex-container-items .container-empty h3 {
   text-align: center;
-  color: #d3d3d3;
+  color: #ffffff;
 }
 
 main .flex-container-items .item-cart {
@@ -120,11 +122,8 @@ main .flex-container-items .item-cart {
   width: 90%;
   height: 120px;
   margin: 15px auto 0;
-  outline: 2px solid #e7ba52c2;
   border-radius: 15px;
   background: white;
-  -webkit-box-shadow: 4px 4px 8px;
-          box-shadow: 4px 4px 8px;
 }
 
 main .flex-container-items .item-cart .item-img {
@@ -132,28 +131,40 @@ main .flex-container-items .item-cart .item-img {
       -ms-grid-row-align: center;
       align-self: center;
   width: 70px;
-  height: 90%;
+  max-height: 90%;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
 }
 
 main .flex-container-items .item-cart .label-contain {
+  position: relative;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  height: 100%;
 }
 
 main .flex-container-items .item-cart .label-contain h3 {
-  font-size: 1.2em;
+  text-align: left;
+  color: #2b7c46;
+  font-size: 1.1em;
 }
 
 main .flex-container-items .item-cart .label-contain p {
+  text-align: left;
   font-size: .8em;
   color: #747171;
 }
 
 main .flex-container-items .item-cart .label-contain span {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  text-align: right;
   display: block;
-  margin: 15px 15px 0;
-  font-weight: bold;
+  font-weight: 600;
   color: #525252;
 }
 
@@ -168,30 +179,41 @@ main .flex-container-items .item-cart .buttons-item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
 }
 
 main .flex-container-items .item-cart .buttons-item .remove-item {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   margin: 10px;
-  border: 1px solid rgba(107, 107, 107, 0.432);
+  text-align: center;
+  padding-bottom: 2px;
+  border: 1px solid rgba(107, 107, 107, 0.26);
   border-radius: 15px;
-  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
-          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+  -webkit-box-shadow: 2px 2px 5px rgba(13, 39, 80, 0.16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, 0.16), inset -2px -1px 2px #fff;
+          box-shadow: 2px 2px 5px rgba(13, 39, 80, 0.16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, 0.16), inset -2px -1px 2px #fff;
 }
 
 main .flex-container-items .item-cart .buttons-item .items-amount {
-  margin: 10px;
+  float: right;
+  margin: 10px 0 10px 20px;
+}
+
+main .flex-container-items .item-cart .buttons-item .items-amount .amount {
+  margin: 0 3px;
+  color: #c08702;
 }
 
 main .flex-container-items .item-cart .buttons-item .items-amount .subtractAmount, main .flex-container-items .item-cart .buttons-item .items-amount .addAmount {
-  width: 24px;
-  border: 1px solid rgba(107, 107, 107, 0.432);
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(107, 107, 107, 0.219);
   border-radius: 15px;
-  -webkit-box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
-          box-shadow: 3px 3px 5px rgba(13, 39, 80, 0.16), -3px -3px 5px #fff, inset 3px 3px 5px rgba(13, 39, 80, 0.16), inset -3px -3px 5px #fff;
+  -webkit-box-shadow: 2px 2px 5px rgba(13, 39, 80, 0.16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, 0.16), inset -2px -1px 2px #fff;
+          box-shadow: 2px 2px 5px rgba(13, 39, 80, 0.16), -2px -2px 5px #fff, inset 1px 1px 2px rgba(13, 39, 80, 0.16), inset -2px -1px 2px #fff;
 }
 
 main .total-price {
