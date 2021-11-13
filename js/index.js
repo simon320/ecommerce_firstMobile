@@ -4,7 +4,6 @@ const menuIcon = document.getElementById("menuIcon");
 const bar = document.getElementsByClassName("bar");
 const imgHand = document.getElementById("imgHand");
 
-menuBurger.style.maxWidth = "0px";
 
 menuIcon.onclick = function menuToggle() {
     if (menuBurger.style.maxWidth == "0px") 
@@ -199,34 +198,6 @@ shopOption[2].onclick = function(){
         containerProduct.style.left = "-200%";
     }
 }
-
-
-// Icon like(product)
-let heart = document.getElementsByClassName("bi-heart");
-let heartFill = document.getElementsByClassName("bi-heart-fill");
-let divLike = document.getElementsByClassName("like");
-
-
-for (let i=0; i<25; i++) {
-    heart[i].style.display = "block";
-    heartFill[i].style.opacity = "0";
-    divLike[i].onclick = function () {
-        if (heart[i].style.display == "block") 
-        {
-            heart[i].style.display = "none";
-            heartFill[i].classList.remove("animated-dontLikeHeart");
-            heartFill[i].classList.add("animated-likeHeart");
-        }
-        else 
-        {
-            heart[i].style.display = "block";
-            heartFill[i].classList.remove("animated-likeHeart");
-            heartFill[i].classList.add("animated-dontLikeHeart");
-        }
-    }
-}
-
-
 // Carousel
 const arrowPrev = document.getElementById("arrow-prev");
 const arrowNext = document.getElementById("arrow-next");
@@ -251,38 +222,18 @@ arrowNext.onclick = function() {
 arrowPrev.onclick = function() {
     if (containerCarousel.style.left == "0%")
     {
-        containerCarousel.style.left = "-200%"
+        containerCarousel.style.left = "-200%";
     }
     else if (containerCarousel.style.left == "-200%")
     {
-        containerCarousel.style.left = "-100%"
+        containerCarousel.style.left = "-100%";
     }
     else 
     {
-        containerCarousel.style.left = "0%"
+        containerCarousel.style.left = "0%";
     }
 } 
 
-
-// Ghost Effect
-// let ghostEffect = document.querySelectorAll(".effect");
-
-// function showScroll() {
-//     let scrollTop = document.documentElement.scrollTop;
-//     for (let i=0; i<ghostEffect.length; i++){
-//         let topAnimated = ghostEffect[i].offsetTop;
-//         if(topAnimated - 500 < scrollTop){
-//             ghostEffect[i].style.opacity = 1;
-//             if((i % 2) == 0){
-//                 ghostEffect[i].classList.add("animatedLeft");
-//             } else{
-//                 ghostEffect[i].classList.add("animatedRight");
-//             }
-//         }
-//     }
-// }
-
-// window.addEventListener('scroll', showScroll);
 
 
 // Login
@@ -332,5 +283,30 @@ signUp.onclick = function() {
         buttons[0].style.display = "block"; 
         
         signUpClick = 1;
+    }
+}
+
+// Icon like(product)
+let heart = document.getElementsByClassName("bi-heart");
+let heartFill = document.getElementsByClassName("bi-heart-fill");
+let divLike = document.getElementsByClassName("like");
+
+
+for (let i=0; i<25; i++) {
+    heart[i].style.display = "block";
+    heartFill[i].style.opacity = "0";
+    divLike[i].onclick = function () {
+        if (heart[i].style.display == "block") 
+        {
+            heart[i].style.display = "none";
+            heartFill[i].classList.remove("animated-dontLikeHeart");
+            heartFill[i].classList.add("animated-likeHeart");
+        }
+        else 
+        {
+            heart[i].style.display = "block";
+            heartFill[i].classList.remove("animated-likeHeart");
+            heartFill[i].classList.add("animated-dontLikeHeart");
+        }
     }
 }

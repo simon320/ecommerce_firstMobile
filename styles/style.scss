@@ -90,21 +90,7 @@ body {
 .animated-dontLikeHeart {
     animation: dontLikeHeart 1s forwards;
 }
-/*-----------MIXIN---------*/
-// @mixin btn {
-//     display: inline-block;
-//     background: #e7ba52;
-//     color: #425e42;
-//     padding: 8px 30px;
-//     border: 2.5px solid #e7ba52;
-//     border-radius: 25px;
-//     cursor: pointer;
-//     transition: background .5s;
-//     &:hover{
-//         background: none;
-//         color: #fff;
-//     } 
-// }
+
 
 @mixin btn {
     display: inline-block;
@@ -125,6 +111,10 @@ body {
 
 
 /*-----------HEADER---------*/
+html {
+    overflow-x: hidden;
+    
+}
 header {
     background: rgb(30,75,69);
     background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 159%);
@@ -142,13 +132,14 @@ header {
         .logo {
             display: none;
 
-            grid-column: 2 / 4;
-
             img {
                 width: 62px;
             }
         }
 
+        #menuBurger {
+            max-width: 0px;
+        }
         .list-container {
             display: flex;
             flex-direction: column;
@@ -156,8 +147,8 @@ header {
             position: absolute;
             top: 0;
             left: 0;
-            height: 150vw;
             width: 100%;
+            height: 150vw;
             padding-top: 80px;
             text-align: left;
             overflow: hidden;
@@ -238,9 +229,9 @@ header {
         }
     }
 
-    .grid-container-header {
+    .container-header {
         display: grid;
-        grid-template-columns: minmax(280px, 540px);
+        grid-template-columns: minmax(280px, 591px);
         grid-template-rows: 2fr;
 
         .content-header-a {
@@ -268,11 +259,14 @@ header {
         }
         .content-header-b {
             grid-row: 1;
+            position: relative;
+           
 
             img {
                 position: relative;
                 z-index: 100;
                 width: 100%;
+                right: -25px;
                 transition: all .8s;
             }
         }
@@ -289,8 +283,9 @@ header {
     .img-gallery {
         width: 60%;
         margin-top: 50px;
-
+        
         img {
+            border-radius: 15px;
             width: 100%;
         }
     }
@@ -605,7 +600,7 @@ header {
         border-radius: 15px;
         color: #fff;
         background-color: #ffffff10;
-        backdrop-filter: blur(8px);;
+        backdrop-filter: blur(10px);
 
         .title {
             align-self: center;
@@ -779,25 +774,153 @@ footer {
     }
 }
 
-.mediaNoSuport {
-    display: none;
+////////////////////////////////////////////////////////////////
+
+@media (min-width: 591px) {
+// _______________________________________________________________HEADER
+    header {
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+
+            .logo {
+                display: inline-block;
+            }
+
+            #menuBurger {
+                min-width: 65%;
+            }
+            .list-container {
+                position: relative;
+                display: inline-block;
+                max-height: 80px;
+                padding: 0;
+                background: none;
+
+                ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    
+                    li{
+                        margin: 25px 10px;
+
+                        a {
+                            &:hover {
+                                border-bottom: 2px solid #e7ba52;
+                            }
+                        }
+                    }
+                }
+
+                .icons-container {
+                    display: none;
+                }
+            }
+
+            .buy-container {
+                margin: 4%;
+            }
+
+            .menu-icon {
+                display: none;
+            }
+        }
+
+        .container-header {
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            grid-template-rows: 200px;
+            padding-bottom: 80px;
+
+            .content-header-a {
+                grid-column: 1;
+                grid-row: 2;
+                align-items: end;
+            }
+            .content-header-b {
+                grid-column: 2;
+
+                img {
+                    max-width: 420px;
+                }
+            }
+        }
+    }
+    
+    
+    // _______________________________________________________________GALERY
+    .flex-container-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        .img-gallery {
+            margin: 80px auto;
+        }
+    }
+    
 }
 
-@media (min-width: 541px) {
-    body {
-        overflow: hidden;
-    }
-    .mediaNoSuport {
-        display: block;
-        position: absolute;
-        top: 0;
-        z-index: 1000;
-        height: 100vh;
-        width: 100vw;
-        text-align: center;
-        background: #000;
-        h2 {
-            color: #fff;
+@media (min-width: 880px) {
+// _______________________________________________________________HEADER
+    header {
+        nav {
+            height: 100px;
+
+            #menuBurger {
+                max-width: 70%;
+            }
+
+            .list-container {
+                display: inline-block;
+                max-width: 50%;
+            
+                ul {
+                    width: 85%;
+
+                    li {
+                        margin: 25px;
+                    }
+                }
+            }
+        }
+        .container-header {
+            grid-template-rows: 1fr;
+            max-width: 1920px;
+
+            .content-header-a {
+                grid-row: 1;
+                justify-content: center;
+            }
+            .content-header-b {
+
+                img {
+                    top: -100px;
+                    right: -15%;
+                    max-width: 840px;
+                }
+            }
         }
     }
 }
+
+
+@media (min-width: 1400px) {
+// _______________________________________________________________HEADER
+    header {
+
+        .container-header {
+
+            .content-header-a {
+
+                h1 {
+                    font-size: 5em;
+                    line-height: 100px;
+                }
+                p {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
