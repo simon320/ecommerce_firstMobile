@@ -14,22 +14,31 @@ function removeAll(newElement1, newElement2) {
 
 
 // Remove Button (cart.html)
-const removeItemButton = document.getElementsByClassName("remove-item");
+let removeItemButton = document.getElementsByClassName("remove-item");
 let itemCart = document.getElementsByClassName("item-cart");
 
 
 
-    for (let i=0; i<itemCart.length; i++){
-        removeItemButton[i].onclick = () => {
-            if(itemCart.length > 1){
-                itemCart[i].remove();
-                i = 0;
-            } else {
-                removeAll(containerItems, totalPrice);
-            }
-            priceCalculator();
+
+
+for (let i=0; i<itemCart.length; i++){
+
+    removeItemButton[i].onclick = () => {
+        
+        if(itemCart.length > 1)
+        {
+            itemCart[i].remove();
+        } 
+        else 
+        {
+            removeAll(containerItems, totalPrice);
         }
+
+        priceCalculator();
     }
+
+}
+
 
 
 
