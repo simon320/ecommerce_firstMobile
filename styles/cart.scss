@@ -97,6 +97,7 @@ main {
             display: flex;
             justify-content: space-evenly;
             width: 90%;
+            max-width: 420px;
             height: 120px;
             margin: 15px auto 0;
             border-radius: 15px;
@@ -189,6 +190,8 @@ main {
 
     #toBuy {
         @include btn;
-        margin: 0 10px 30px;
+        width: 60%;
+        max-width: 420px;
+        margin: 0 auto 30px;
     }
 }

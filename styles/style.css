@@ -1289,6 +1289,10 @@ footer .rights {
 }
 
 @media (min-width: 684px) {
+  .carousel #arrows-wrapper p {
+    text-shadow: 2px 2px 4px #000;
+    font-size: 5vw;
+  }
   .carousel .flex-container-carousel .article-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

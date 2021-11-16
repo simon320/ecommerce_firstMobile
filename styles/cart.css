@@ -120,6 +120,7 @@ main .flex-container-items .item-cart {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 90%;
+  max-width: 420px;
   height: 120px;
   margin: 15px auto 0;
   border-radius: 15px;
@@ -240,7 +241,9 @@ main #toBuy {
   cursor: pointer;
   -webkit-transition: background .5s;
   transition: background .5s;
-  margin: 0 10px 30px;
+  width: 60%;
+  max-width: 420px;
+  margin: 0 auto 30px;
 }
 
 main #toBuy:hover {
