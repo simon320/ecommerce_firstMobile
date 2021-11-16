@@ -807,6 +807,8 @@ header .container-header .content-header-b img {
       flex-wrap: nowrap;
   width: 300vw;
   margin-bottom: 50px;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
   -webkit-transition: left .5s;
   transition: left .5s;
 }
@@ -825,15 +827,13 @@ header .container-header .content-header-b img {
 .carousel .flex-container-carousel .article-container img {
   position: relative;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
 }
 
 .carousel .flex-container-carousel .article-container .carousel-caption {
   background: #065a31;
   background: linear-gradient(20deg, #1e4b45 0%, #96bc81 199%);
   background: #5F865F;
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
-          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
   width: 100vw;
   height: 209px;
   padding: 30px;
@@ -891,7 +891,9 @@ header .container-header .content-header-b img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 500px;
+  max-width: 600px;
   padding: 15px 0;
+  margin: auto;
   border-radius: 15px;
   color: #fff;
   background-color: #ffffff10;
@@ -1283,6 +1285,53 @@ footer .rights {
     -ms-grid-row: 3;
     -ms-grid-row-span: 3;
     grid-row: 3 / 6;
+  }
+}
+
+@media (min-width: 684px) {
+  .carousel .flex-container-carousel .article-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .carousel .flex-container-carousel .article-container img {
+    height: 100%;
+    width: 50%;
+  }
+  .carousel .flex-container-carousel .article-container .carousel-caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+  .carousel .flex-container-carousel .article-container .carousel-caption h5 {
+    margin-top: 8vw;
+    font-size: 4vw;
+  }
+  .carousel .flex-container-carousel .article-container .carousel-caption p {
+    margin-bottom: 14vw;
+    width: 30vw;
+  }
+  .carousel .flex-container-carousel .article-container .carousel-caption .btn {
+    width: 60%;
+  }
+}
+
+@media (min-width: 800px) {
+  .carousel .flex-container-carousel .article-container img {
+    width: 60%;
+  }
+  .carousel .flex-container-carousel .article-container .carousel-caption {
+    width: 40%;
   }
 }
 

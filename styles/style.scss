@@ -545,6 +545,7 @@ header {
         width: 300vw;
         margin-bottom: 50px;
         
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
         transition: left .5s;
         
 
@@ -556,14 +557,13 @@ header {
             img {
                 position: relative;
                 z-index: -1;
-                width: 100vw;
+                width: 100%;
             }
 
             .carousel-caption {
                 background: #065a31;
                 background: linear-gradient(20deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 199%);
                 background: #5F865F;
-                box-shadow: 2px 2px 3px rgba(0,0,0,0.75);
                 width: 100vw;
                 height: 209px;
                 padding: 30px;
@@ -602,7 +602,9 @@ header {
         flex-direction: column;
         justify-content: space-around;
         height: 500px;
+        max-width: 600px;
         padding: 15px 0;
+        margin: auto;
         border-radius: 15px;
         color: #fff;
         background-color: #ffffff10;
@@ -919,14 +921,80 @@ footer {
 }
 
 
-@media (min-width: 700px) {
+
+@media (min-width: 684px) {
     // _______________________________________________________________CAROUSEL
-    
+    .carousel {
 
+        #arrows-wrapper {
 
+            p {}
+            #arrow-prev {}
+            #arrow-next {}
+        }
 
-}    
+        .flex-container-carousel {
 
+            .article-container {
+                flex-direction: row;
+
+                img {
+                    height: 100%;
+                    width: 50%;
+                    
+                }
+
+                .carousel-caption {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+
+                    h5 {
+                        margin-top: 8vw;
+                        font-size: 4vw;
+                    }
+                    p {
+                        margin-bottom: 14vw;
+                        width: 30vw;
+                    }
+                    .btn {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media (min-width: 800px) {
+    // _______________________________________________________________CAROUSEL
+    .carousel {
+
+        #arrows-wrapper {
+
+            p {}
+            #arrow-prev {}
+            #arrow-next {}
+        }
+
+        .flex-container-carousel {
+
+            .article-container {
+
+                img {
+                    width: 60%;
+                }
+
+                .carousel-caption {
+                    width: 40%;
+
+                }
+            }
+        }
+    }    
+}
 
 @media (min-width: 880px) {
 // _______________________________________________________________HEADER
