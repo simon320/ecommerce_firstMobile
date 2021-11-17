@@ -35,6 +35,7 @@ let option1 = 1;
 let option2 = 0; 
 let option3 = 0; 
 shopOption[0].style.cursor = "default";
+shopOption[0].style.border = "2px solid #000";
 shopOption[1].style.cursor = "pointer";
 shopOption[2].style.cursor = "pointer";
 
@@ -44,6 +45,7 @@ shopOption[0].onclick = function(){
         shopOption[0].style.transform = "scale(1.2)";
         shopOption[0].style.background = "rgb(80, 182, 80)";
         shopOption[0].style.zIndex = "100";
+        shopOption[0].style.border = "2px solid #000";
         shopOption[0].style.cursor = "default";   
 
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -51,12 +53,14 @@ shopOption[0].onclick = function(){
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.border = "none";
         shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1)"
         shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
+        shopOption[2].style.border = "none";
         shopOption[2].style.cursor = "pointer";
 
         option1 = 1;
@@ -69,6 +73,7 @@ shopOption[0].onclick = function(){
         shopOption[0].style.transform = "scale(1.2)";
         shopOption[0].style.background = "rgb(80, 182, 80)";
         shopOption[0].style.zIndex = "100";
+        shopOption[0].style.border = "2px solid #000";
         shopOption[0].style.cursor = "default";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -76,6 +81,7 @@ shopOption[0].onclick = function(){
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.border = "none";
         shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -83,6 +89,7 @@ shopOption[0].onclick = function(){
         shopOption[2].style.transform = "scale(1)";
         shopOption[2].style.background = "rgb(38, 87, 38)";
         shopOption[2].style.zIndex = "0";
+        shopOption[2].style.border = "none";
         shopOption[2].style.cursor = "pointer";
 
         option1 = 1;
@@ -99,18 +106,21 @@ shopOption[1].onclick = function(){
         shopOption[0].style.transform = "scale(1.1)";
         shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
+        shopOption[0].style.border = "none";
         shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
         shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
+        shopOption[1].style.border = "2px solid #000";
         shopOption[1].style.cursor = "default";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.1)"
         shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
+        shopOption[2].style.border = "none";
         shopOption[2].style.cursor = "pointer";
 
         option1 = 0;
@@ -123,12 +133,14 @@ shopOption[1].onclick = function(){
         shopOption[0].style.transform = "scale(1.1)";
         shopOption[0].style.background = "rgb(52, 124, 52)";
         shopOption[0].style.zIndex = "50";
+        shopOption[0].style.border = "none";
         shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[1].style.transform = "scale(1.2)";
         shopOption[1].style.background = "rgb(80, 182, 80)";
         shopOption[1].style.zIndex = "100";
+        shopOption[1].style.border = "2px solid #000";
         shopOption[1].style.cursor = "default";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -136,6 +148,7 @@ shopOption[1].onclick = function(){
         shopOption[2].style.transform = "scale(1.1)"
         shopOption[2].style.background = "rgb(52, 124, 52)";
         shopOption[2].style.zIndex = "50";
+        shopOption[2].style.border = "none";
         shopOption[2].style.cursor = "pointer";
 
         option1 = 0;
@@ -152,6 +165,7 @@ shopOption[2].onclick = function(){
         shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.transform = "scale(1)";
         shopOption[0].style.zIndex = "0";
+        shopOption[0].style.border = "none";
         shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -159,12 +173,14 @@ shopOption[2].onclick = function(){
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.border = "none";
         shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
         shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
+        shopOption[2].style.border = "2px solid #000";
         shopOption[2].style.cursor = "default";
 
         option1 = 0;
@@ -177,6 +193,7 @@ shopOption[2].onclick = function(){
         shopOption[0].style.transform = "scale(1)";
         shopOption[0].style.background = "rgb(38, 87, 38)";
         shopOption[0].style.zIndex = "0";
+        shopOption[0].style.border = "none";
         shopOption[0].style.cursor = "pointer";
         
         shopOption[1].classList.remove("animated-moveRight", "animated-moveLeft");
@@ -184,12 +201,14 @@ shopOption[2].onclick = function(){
         shopOption[1].style.transform = "scale(1.1)";
         shopOption[1].style.background = "rgb(52, 124, 52)";
         shopOption[1].style.zIndex = "50";
+        shopOption[1].style.border = "none";
         shopOption[1].style.cursor = "pointer";
         
         shopOption[2].classList.remove("animated-moveRight", "animated-moveLeft");
         shopOption[2].style.transform = "scale(1.2)"
         shopOption[2].style.background = "rgb(80, 182, 80)";
         shopOption[2].style.zIndex = "100";
+        shopOption[2].style.border = "2px solid #000";
         shopOption[2].style.cursor = "default";
 
         option1 = 0;
@@ -248,18 +267,20 @@ let signUpClick = 1;
 let signInClick = 0;
 
 signUp.style.borderBottom = "2px solid #e7ba52";
+signIn.style.cursor = "pointer";
 buttons[1].style.display = "none"; 
 
 signIn.onclick = function() {
     if(signInClick == 0)
     {
         signIn.style.borderBottom = "2px solid #e7ba52"
+        signIn.style.cursor = "default";
         buttons[1].style.display = "block"; 
         containerInput[0].style.justifyContent = "flex-start";
-        
         signInClick = 1;
 
         signUp.style.borderBottom = "none";
+        signUp.style.cursor = "pointer";
         nameUser[0].style.display = "none";
         nameUser[1].style.display = "none";
         terms.style.display = "none"
@@ -274,14 +295,15 @@ signUp.onclick = function() {
         signIn.style.borderBottom = "none"
         buttons[1].style.display = "none"; 
         containerInput[0].style.justifyContent = "space-evenly";
+        signIn.style.cursor = "pointer";
         signInClick = 0;
         
         signUp.style.borderBottom = "2px solid #e7ba52";
+        signUp.style.cursor = "default";
         nameUser[0].style.display = "block";
         nameUser[1].style.display = "block";
         terms.style.display = "flex"
         buttons[0].style.display = "block"; 
-        
         signUpClick = 1;
     }
 }

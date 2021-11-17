@@ -9,20 +9,19 @@
     <title>Ecommerce | Dale Vida</title>
 </head>
 <body>
-
+    
+    <nav class="flex-container-nav">
+        <a class="container-a" href="https://ecommerce-first-mobile.vercel.app/">
+            <i class="bi bi-arrow-left arrow-product"></i>
+        </a> 
+        
+        <button id="cleanButton"> Limpiar </button>
+    </nav>
+    
+    
     <main>
 
-        <div class="flex-container-nav">
-            <a class="container-a" href="https://ecommerce-first-mobile.vercel.app/">
-                <i class="bi bi-arrow-left arrow-product"></i>
-            </a> 
-
-            <button id="cleanButton"> Limpiar </button>
-        </div>
-
-
-
-        <div id="containerItems" class="flex-container-items">
+        <div id="containerItems" class="flex-container-a">
 
             <div class="item-cart">
 
@@ -38,9 +37,9 @@
                     <button class="remove-item">x</button>
 
                     <div class="items-amount">
-                        <button class="subtractAmount">-</button>
+                        <button class="subtract-amount">-</button>
                         <span class="amount">1</span>
-                        <button class="addAmount">+</button>
+                        <button class="add-amount">+</button>
                     </div>
                 </div>
 
@@ -60,9 +59,9 @@
                     <button class="remove-item">x</button>
 
                     <div class="items-amount">
-                        <button class="subtractAmount">-</button>
+                        <button class="subtract-amount">-</button>
                         <span class="amount">1</span>
-                        <button class="addAmount">+</button>
+                        <button class="add-amount">+</button>
                     </div>
                 </div>
                 
@@ -82,9 +81,9 @@
                     <button class="remove-item">x</button>
 
                     <div class="items-amount">
-                        <button class="subtractAmount">-</button>
+                        <button class="subtract-amount">-</button>
                         <span class="amount">1</span>
-                        <button class="addAmount">+</button>
+                        <button class="add-amount">+</button>
                     </div>
                 </div>
                 
@@ -92,9 +91,11 @@
 
         </div>
 
-        <p class="total-price">Precio total <span  id="totalPrice">$0.00</span></p>
-
-        <button id="toBuy">Comprar</button>
+        <div class="flex-container-b">
+            <p class="total-price">Precio total <span  id="totalPrice">$0.00</span></p>
+            
+            <button id="toBuy">Comprar</button>
+        </div>
 
     </main>
 

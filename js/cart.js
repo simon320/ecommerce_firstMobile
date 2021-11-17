@@ -45,8 +45,8 @@ for (let i=0; i<itemCart.length; i++){
 
 // Items Amount & Total Price(cart.html)
 const itemsAmount = document.getElementsByClassName("items-amount");
-const subtractAmount = document.getElementsByClassName("subtractAmount");
-const addAmount = document.getElementsByClassName("addAmount");
+const subtractAmount = document.getElementsByClassName("subtract-amount");
+const addAmount = document.getElementsByClassName("add-amount");
 const amount = document.getElementsByClassName("amount");
 const price = document.getElementsByClassName("price");
 let priceAccumulated;

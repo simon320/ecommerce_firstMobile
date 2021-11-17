@@ -41,43 +41,48 @@ body {
 
 
 /*-----------PAGE---------*/
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: rgb(30,75,69);
+    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 159%);
+}
+
+.flex-container-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    padding-right: 20px;
+    margin-top: 20px;
+
+    .container-a {
+        width: 50px;
+        margin: 15px;
+
+        .arrow-product {
+            font-size: 1.8em;
+            color: #ffffff;
+        }
+    }  
+        
+    #cleanButton {
+        @include btn;
+        margin-right: 8%;
+        transform-origin: right;
+        transform: scale(.8);
+    }
+    
+}
+
 main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: rgb(30,75,69);
-    background: linear-gradient(90deg, rgba(30,75,69,1) 0%, rgba(150,188,129,1) 159%);
 
-    .flex-container-nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
-        height: 40px;
-        padding-right: 20px;
-        margin-top: 20px;
-
-        .container-a {
-            width: 50px;
-            margin: 15px;
-
-            .arrow-product {
-                font-size: 1.8em;
-                color: #ffffff;
-            }
-        }  
-            
-        #cleanButton {
-            @include btn;
-            align-self: flex-start;
-            transform-origin: right;
-            transform: scale(.8);
-        }
-        
-    }
-
-    .flex-container-items {
+    .flex-container-a {
         display: flex;
         flex-direction: column;
         width: 100vw;
@@ -164,7 +169,7 @@ main {
                         margin: 0 3px;
                         color: #c08702;
                     }
-                    .subtractAmount, .addAmount {
+                    .subtract-amount, .add-amount {
                         width: 22px;
                         height: 22px;
                         border: 1px solid rgba(107, 107, 107, 0.219);
@@ -177,21 +182,48 @@ main {
         }
     }
 
-    .total-price {
-        align-self: flex-end;
-        margin: 40px 15px;
-        color: #d3d3d3;
+    .flex-container-b {
+        display: flex;
+        flex-direction: column;
+
+        .total-price {
+            align-self: flex-end;
+            margin: 40px 8%;
+            color: #d3d3d3;
+            
+            span {
+                font-weight: bold;
+                color: #e7ba52;
+            }
+        }
         
-        span {
-            font-weight: bold;
-            color: #e7ba52;
+        #toBuy {
+            @include btn;
+            width: 60%;
+            max-width: 420px;
+            margin: 0 auto 30px;
         }
     }
+}
 
-    #toBuy {
-        @include btn;
-        width: 60%;
-        max-width: 420px;
-        margin: 0 auto 30px;
+@media (min-width: 769px) {
+    main {
+        flex-direction: row;
+        
+        height: 80vh;
+        
+        .flex-container-b {
+            justify-content: flex-end;
+            width: 40%;
+            height: 60vh;
+            margin-right: 13vw;
+
+            .total-price {
+                align-self: center;
+            }
+
+        }
+            
     }
+    
 }
