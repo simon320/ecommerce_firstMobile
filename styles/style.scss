@@ -286,6 +286,7 @@ header {
 
     .img-gallery {
         flex-basis: 30%;
+        min-width: 240px;
         max-width: 250px;
         height: 400px;
         margin: 30px 20px;
